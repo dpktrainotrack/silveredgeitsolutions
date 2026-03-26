@@ -618,10 +618,13 @@ img {
   justify-content: center;
   margin: 0 auto 20px;
   transition: var(--transition);
+  border: 1px solid rgb(226, 226, 226);
 }
 
 .course-card:hover .card-icon {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  /* background: linear-gradient(135deg, var(--primary), var(--primary-light)); */
+  /* background: transparent; */
+  border: 1px solid var(--gold);
 }
 
 .course-card .card-icon i {
@@ -883,7 +886,7 @@ img {
 
 /* ---------- Testimonials ---------- */
 .testimonial-card {
-  background: var(--white);
+  background: rgb(247, 247, 247);
   border-radius: var(--radius);
   padding: 35px 30px;
   box-shadow: var(--shadow);
@@ -952,7 +955,7 @@ img {
 
 /* ---------- Partners / Collaborative Network ---------- */
 .partners-section .partner-logo {
-  padding: 20px 30px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -970,9 +973,10 @@ img {
 }
 
 .partners-section .partner-logo img {
+  width: auto;
   max-height: 50px;
-  filter: grayscale(100%);
-  opacity: 0.6;
+  /* filter: grayscale(100%); */
+  /* opacity: 0.6; */
   transition: var(--transition);
 }
 
@@ -1814,11 +1818,11 @@ img {
   padding-top: 15px;
 }
 
-#placements .placement-company {
+:is(#placements, #testimonials, #partners) .placement-company {
   margin-bottom: 0px;
 }
 
-#placements .owl-stage-outer {
+:is(#placements, #testimonials, #partners) .owl-stage-outer {
   padding-bottom: 30px;
 }
 
@@ -1828,8 +1832,8 @@ img {
   gap: 10px
 }
 
-#placements .owl-nav button.owl-prev,
-#placements .owl-nav button.owl-next,
+:is(#placements, #testimonials, #partners) .owl-nav button.owl-prev,
+:is(#placements, #testimonials, #partners) .owl-nav button.owl-next,
 .custom-nav-icons {
   border: 2px solid var(--primary);
   width: 35px;
@@ -1838,6 +1842,7 @@ img {
   display: grid;
   place-items: center;
 }
+
 
 .custom-nav-icons i {
   color: var(--primary);

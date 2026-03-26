@@ -223,11 +223,12 @@ $(document).ready(function () {
   $(".testimonial-carousel").owlCarousel({
     loop: true,
     margin: 20,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
     smartSpeed: 700,
-
+    animateOut: 'fadeOut',   // fade out effect
+    animateIn: 'fadeIn',
     nav: true,
     dots: true,
 
@@ -240,6 +241,29 @@ $(document).ready(function () {
       0: { items: 1 },
       768: { items: 2 },
       992: { items: 3 }
+    }
+  });
+});
+
+
+$(document).ready(function () {
+  $("#partnerOwlCarousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    smartSpeed: 3000,
+    nav: false,
+    dots: false,
+    navText: [
+      '<i class="fa-solid fa-chevron-left"></i>',
+      '<i class="fa-solid fa-chevron-right"></i>'
+    ],
+    responsive: {
+      0: { items: 2 },
+      600: { items: 3 },
+      1000: { items: 5 }
     }
   });
 });
