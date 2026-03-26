@@ -404,7 +404,7 @@ img {
 /* ---------- Hero Section ---------- */
 .hero-section {
   /* background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 60%, #0a1628 100%); */
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   /* align-items: center; */
   position: relative;
