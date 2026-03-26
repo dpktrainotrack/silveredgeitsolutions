@@ -212,7 +212,7 @@ img {
 
 /* ---------- Navbar ---------- */
 .navbar {
-  /* background: var(--white); */
+  background: var(--white);
   padding: 12px 0;
   transition: var(--transition);
   box-shadow: none;
@@ -255,8 +255,8 @@ img {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
-  /* color: var(--text-dark) !important; */
-  color: var(--light-bg);
+  color: var(--text-dark);
+  /* color: var(--light-bg); */
   padding: 8px 18px !important;
   position: relative;
   transition: var(--transition);
@@ -281,8 +281,8 @@ img {
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  /* color: var(--primary); */
-  color: var(--light-bg);
+  color: var(--gold);
+
 }
 
 .btn-nav-cta {
@@ -794,16 +794,21 @@ img {
 .industry-card {
   text-align: center;
   padding: 35px 20px;
-  border-radius: var(--radius);
+  /* border-radius: var(--radius); */
   background: var(--white);
-  border: 1px solid var(--border-color);
+  border-bottom: 1px dashed rgb(156, 156, 156);
   transition: var(--transition);
   height: 100%;
+  display: grid;
+  align-items: center;
+  gap: 10px;
+  grid-template-columns: 72px 1fr;
+  margin-right: 20px;
 }
 
 .industry-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-hover);
+  /* transform: translateY(-4px); */
+  /* box-shadow: var(--shadow-hover); */
   border-color: var(--gold);
 }
 
@@ -815,12 +820,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 18px;
+  /* margin: 0 auto 18px; */
   transition: var(--transition);
+  border: 1px solid rgb(226, 226, 226);
 }
 
 .industry-card:hover .industry-icon {
-  background: linear-gradient(135deg, var(--primary), var(--gold));
+  /* background: linear-gradient(135deg, var(--primary), var(--gold)); */
+  border: 1px solid var(--gold);
 }
 
 .industry-card .industry-icon i {
