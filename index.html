@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-
+  <link rel="stylesheet" href="css/style.css">
   <!-- ===footer-1-style=== -->
   <style>
     .inquiry-section {
@@ -227,9 +227,11 @@
     .ft-our-courses li {
       padding-bottom: 10px;
     }
+
+    /* Mobile dropdown handled in style.css */
   </style>
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body style="overflow-x: hidden;">
@@ -370,122 +372,21 @@
         font-size: 12px;
       }
 
-      /* Responsive Dropdown Styles */
-      .custom-dropdown {
-        position: relative;
-      }
-
-      .drop-down-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: var(--white);
-        min-width: 230px;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
-        list-style: none;
-        margin: 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(15px);
-        transition: all 0.3s ease;
-        z-index: 1060;
-      }
-
-      .drop-down-links li a {
-        display: block;
-        padding: 10px 25px;
-        color: var(--text-dark) !important;
-        font-weight: 500;
-        font-size: 15px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .drop-down-links li a i {
-        color: var(--gold);
-        margin-right: 10px;
-        font-size: 12px;
-        transition: all 0.3s ease;
-      }
-
-      .drop-down-links li a:hover {
-        color: var(--primary) !important;
-        padding-left: 30px;
-        background: rgba(47, 148, 219, 0.05);
-        /* very light gold/blue highlight */
-      }
-
-      /* Desktop Hover */
-      @media (min-width: 992px) {
-        .custom-dropdown:hover .drop-down-links {
-          opacity: 1;
-          visibility: visible;
-          transform: translateY(0);
-        }
-      }
-
-      /* Mobile Accordion Style */
-      @media (max-width: 991px) {
-        .drop-down-links {
-          position: static;
-          box-shadow: none;
-          background: transparent;
-          opacity: 1;
-          visibility: visible;
-          transform: none;
-          display: none;
-          /* Hidden on mobile by default */
-          padding: 5px 0 5px 15px;
-        }
-
-        .drop-down-links.show {
-          display: block;
-          animation: fadeIn 0.3s ease;
-        }
-
-        .drop-down-links li a {
-          color: rgba(255, 255, 255, 0.8) !important;
-          padding: 8px 15px;
-        }
-
-        .drop-down-links li a:hover {
-          color: var(--white) !important;
-          padding-left: 20px;
-        }
-
-        .navbar-scrolled .drop-down-links li a {
-          color: var(--text-dark) !important;
-        }
-
-        .navbar-scrolled .drop-down-links li a:hover {
-          color: var(--primary) !important;
-        }
-
-        /* Mobile navbar background when scrolled */
+      /* Mobile navbar background when scrolled */
+      @media (max-width: 991.98px) {
         .navbar-scrolled #mainNavbar2 {
           background-color: var(--white) !important;
         }
 
-        /* Mobile nav links when scrolled */
-        .navbar-scrolled #mainNavbar2 .nav-link {
+        .navbar-scrolled #mainNavbar2 .nav-link,
+        .navbar-scrolled #mainNavbar2 .drop-down-links li a {
           color: var(--text-dark) !important;
         }
 
         .navbar-scrolled #mainNavbar2 .nav-link:hover,
-        .navbar-scrolled #mainNavbar2 .nav-link.active {
+        .navbar-scrolled #mainNavbar2 .nav-link.active,
+        .navbar-scrolled #mainNavbar2 .drop-down-links li a:hover {
           color: var(--primary) !important;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-
-          to {
-            opacity: 1;
-          }
         }
       }
     </style>
@@ -496,7 +397,7 @@
         <div class="container">
           <a class="navbar-brand" href="index.html">
             <div class="brand-text">
-              <img src="images/logo.png" alt="" class="nav-logo" style="transition: all 0.3s ease-in-out;">
+              <img src="images/logo-light.png" alt="" class="nav-logo" style="transition: all 0.3s ease-in-out;">
             </div>
           </a>
           <button class="navbar-toggler  border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -888,7 +789,6 @@
             <a href="courses.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -978,8 +878,6 @@
       </div>
     </div>
   </section>
-
-
   <!-- ========== OUR Placements ========== -->
   <section class=" placement-section section-bg section-padding position-relative" id="placements">
     <div class="container">
@@ -1137,90 +1035,6 @@
       </div>
     </div>
   </section>
-
-
-  <!-- ========== HOW WE WORK / PROCESS ========== -->
-  <!-- <section class="section-padding process-section" id="process">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h6 class="text-gold fw-semibold text-uppercase"><i class="fas fa-cogs me-2"></i>Our Process</h6>
-        <h2>How We Work</h2>
-        <p>A systematic approach to securing your digital assets.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
-          <div class="process-step position-relative">
-            <div class="step-number">01</div>
-            <h4>Analyze & Assess</h4>
-            <p>Comprehensive risk assessment and security audit of your infrastructure.</p>
-            <div class="process-connector d-none d-lg-block"><i class="fas fa-arrow-right"></i></div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="process-step position-relative">
-            <div class="step-number">02</div>
-            <h4>Identify Vulnerabilities</h4>
-            <p>Deep scanning and pen testing to discover security weaknesses.</p>
-            <div class="process-connector d-none d-lg-block"><i class="fas fa-arrow-right"></i></div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="process-step position-relative">
-            <div class="step-number">03</div>
-            <h4>Implement Solutions</h4>
-            <p>Deploy robust security measures and defense systems.</p>
-            <div class="process-connector d-none d-lg-block"><i class="fas fa-arrow-right"></i></div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="process-step">
-            <div class="step-number">04</div>
-            <h4>Monitor & Protect</h4>
-            <p>Continuous monitoring, updates, and 24/7 threat protection.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
-
-  <!-- ========== STATS / ACHIEVEMENTS ========== -->
-  <!-- <section class="section-padding stats-section" id="stats">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-3 col-md-6" data-aos="fade-up">
-          <div class="stat-item">
-            <i class="fas fa-users stat-icon"></i>
-            <h3><span class="counter" data-target="500">0</span>+</h3>
-            <p>Clients Protected</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-item">
-            <i class="fas fa-search stat-icon"></i>
-            <h3><span class="counter" data-target="1000">0</span>+</h3>
-            <p>Security Audits</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-item">
-            <i class="fas fa-shield-halved stat-icon"></i>
-            <h3>99.9%</h3>
-            <p>Threat Prevention Rate</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="stat-item">
-            <i class="fas fa-award stat-icon"></i>
-            <h3><span class="counter" data-target="50">0</span>+</h3>
-            <p>Industry Awards</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <!-- ========== TESTIMONIALS ========== -->
   <section class="section-padding position-relative" id="testimonials">
     <div class="container">
@@ -1314,7 +1128,6 @@
 
     </div>
   </section>
-
   <!-- ========== COLLABORATIVE NETWORK / PARTNERS ========== -->
   <section class="section-padding section-bg partners-section position-relative" id="partners">
     <div class="container">
@@ -1427,7 +1240,7 @@
       </div>
     </div>
   </section> -->
-
+  <!-- ========== FAQ ========== -->
   <section class="faq-section section-padding   position-relative">
     <div class="container">
       <div>
@@ -1512,18 +1325,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ========== CTA SECTION ========== -->
-  <!-- <section class="section-padding cta-section text-center position-relative" id="cta">
-    <div class="container position-relative" style="z-index: 2;">
-      <div data-aos="zoom-in">
-        <h2>Secure Your Business Today</h2>
-        <p>Don't wait for a breach. Protect your organization with industry-leading cyber security solutions.</p>
-        <a href="contact.html" class="btn btn-gold btn-lg"><i class="fas fa-lock me-2"></i>Contact Our Experts</a>
-      </div>
-    </div>
-  </section> -->
-
   <!-- ========== FOOTER ========== -->
   <section class="footer-2-wrepper section-padding section-bg  position-relative">
     <div id="footer-2">
@@ -1729,8 +1530,6 @@
     </div>
   </footer> -->
 
-
-
   <!-- ========== FLOATING BUTTONS ========== -->
   <!-- <div class="floating-buttons">
     <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
@@ -1782,7 +1581,6 @@
       </div>
     </div>
   </div>
-
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -1802,33 +1600,52 @@
           navbar.classList.remove("pt-lg-4");
           navbar.classList.add("py-2");
           // Switch logo to the dark version if available
-          logo.src = "images/logo3.png";
+          logo.src = "images/logo.png";
         } else {
           headerWrapper.classList.remove("navbar-scrolled");
           navbar.classList.remove("py-2");
           navbar.classList.add("pt-lg-4");
           // Switch back to light logo
-          logo.src = "images/logo.png";
+          logo.src = "images/logo-light.png";
         }
       });
 
       // Mobile dropdown toggle script
-      const dropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
-      dropdownToggles.forEach(toggle => {
-        toggle.addEventListener("click", function (e) {
-          e.preventDefault();
-          const dropdown = this.closest(".custom-dropdown").querySelector(".drop-down-links");
-          dropdown.classList.toggle("show");
 
-          // Optional visually flip chevron icon
-          if (dropdown.classList.contains("show")) {
-            this.classList.remove("fa-chevron-down");
-            this.classList.add("fa-chevron-up");
-          } else {
-            this.classList.remove("fa-chevron-up");
-            this.classList.add("fa-chevron-down");
-          }
-        });
+
+
+      // const dropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
+
+      // dropdownToggles.forEach(toggle => {
+      //   toggle.addEventListener("click", function (e) {
+      //     e.preventDefault();
+      //     const dropdown = this.closest(".custom-dropdown").querySelector(".drop-down-links");
+      //     dropdown.classList.toggle("show");
+
+      //     // Optional visually flip chevron icon
+      //     if (dropdown.classList.contains("show")) {
+      //       this.classList.remove("fa-chevron-down");
+      //       this.classList.add("fa-chevron-up");
+      //     } else {
+      //       this.classList.remove("fa-chevron-up");
+      //       this.classList.add("fa-chevron-down");
+      //     }
+      //   });
+      // });
+
+
+    });
+
+
+    document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
+      toggle.addEventListener("click", function () {
+        const parent = this.closest(".custom-dropdown");
+        const dropdown = parent.querySelector(".drop-down-links");
+
+        dropdown.classList.toggle("show-dropownd-mobile");
+
+        // Optional: rotate icon
+        this.classList.toggle("rotate");
       });
     });
 

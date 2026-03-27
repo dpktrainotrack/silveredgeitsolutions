@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="CEH v13 AI – Certified Ethical Hacker Course Details, Exam Information, and Enrollment – Silver Edge IT Solutions.">
+  <title>CEH v13 AI | Course Detail | Silver Edge IT Solutions</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ======= NAVBAR SCROLLED OVERRIDES ======= */
+    .header-wrapper-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-scrolled {
+      background-color: var(--white) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-scrolled .navbar-toggler i {
+      color: var(--text-dark) !important;
+    }
+
+    .navbar-toggler i {
+      color: var(--white);
+      transition: color 0.3s ease-in-out;
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar-scrolled #mainNavbar2 {
+        background-color: var(--white) !important;
+      }
+
+      .navbar-scrolled #mainNavbar2 .nav-link,
+      .navbar-scrolled #mainNavbar2 .drop-down-links li a {
+        color: var(--text-dark) !important;
+      }
+
+      .navbar-scrolled #mainNavbar2 .nav-link:hover,
+      .navbar-scrolled #mainNavbar2 .nav-link.active,
+      .navbar-scrolled #mainNavbar2 .drop-down-links li a:hover {
+        color: var(--primary) !important;
+      }
+    }
+
+    /* ======= PAGE HEADER ======= */
+    .page-header-cd {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+      padding: 130px 0 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header-cd::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(196, 166, 91, 0.12) 0%, transparent 55%),
+        radial-gradient(circle at 80% 20%, rgba(29, 64, 89, 0.3) 0%, transparent 55%);
+    }
+
+    .page-header-cd h1 {
+      color: var(--white);
+      font-size: 2.4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-header-cd .breadcrumb {
+      justify-content: start;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0;
+    }
+
+    .page-header-cd .breadcrumb-item,
+    .page-header-cd .breadcrumb-item a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+
+    .page-header-cd .breadcrumb-item.active {
+      color: var(--gold);
+    }
+
+    .page-header-cd .breadcrumb-item+.breadcrumb-item::before {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ======= SECTION 1 – COURSE INTRO ======= */
+    .course-intro-section {
+      padding: 80px 0;
+    }
+
+    .course-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(196, 166, 91, 0.1), rgba(196, 166, 91, 0.2));
+      border: 1px solid rgba(196, 166, 91, 0.3);
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+    }
+
+    .course-intro-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .course-intro-section h2 span {
+      color: var(--gold);
+    }
+
+    .course-intro-section .course-lead {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* Highlight list */
+    .course-highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .course-highlights li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.93rem;
+      color: var(--text-dark);
+    }
+
+    .course-highlights li i {
+      color: var(--gold);
+      font-size: 0.8rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Stat pills */
+    .course-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--section-bg, #f5f7ff);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .stat-pill i {
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    /* Buttons */
+    .course-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-enroll {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark, #b8932a));
+      color: var(--white);
+      border: none;
+      padding: 13px 28px;
+      border-radius: var(--radius, 8px);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-enroll:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      color: var(--white);
+    }
+
+    .btn-brochure {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      padding: 12px 26px;
+      border-radius: var(--radius, 8px);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-brochure:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* Course image card */
+    .course-img-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(29, 64, 89, 0.18);
+    }
+
+    .course-img-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .course-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(29, 64, 89, 0.05) 0%, rgba(29, 64, 89, 0.4) 100%);
+    }
+
+    .course-img-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-img-badge .badge-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .course-img-badge .badge-text strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--primary);
+    }
+
+    .course-img-badge .badge-text span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ======= SECTION 2 – EXAM DETAILS ======= */
+    .exam-details-section {
+      padding: 80px 0;
+      background: var(--section-bg, #f5f7ff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exam-details-section::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(196, 166, 91, 0.07);
+    }
+
+    .exam-details-section::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(29, 64, 89, 0.05);
+    }
+
+    .exam-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 767px) {
+      .exam-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .course-highlights {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .exam-card {
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(29, 64, 89, 0.08);
+      border: 1px solid rgba(29, 64, 89, 0.07);
+      transition: all 0.3s ease;
+    }
+
+    .exam-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 45px rgba(29, 64, 89, 0.14);
+    }
+
+    .exam-card-header {
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .exam-card-header.mcq {
+      background: linear-gradient(135deg, var(--primary), #2563a8);
+    }
+
+    .exam-card-header.practical {
+      background: linear-gradient(135deg, #8b2252, var(--gold));
+    }
+
+    .exam-card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .exam-card-header h4 {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .exam-card-header p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.8rem;
+      margin: 2px 0 0;
+    }
+
+    .exam-card-body {
+      padding: 6px 0;
+    }
+
+    .exam-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      border-bottom: 1px solid rgba(29, 64, 89, 0.06);
+      gap: 12px;
+    }
+
+    .exam-row:last-child {
+      border-bottom: none;
+    }
+
+    .exam-row-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .exam-row-label i {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(29, 64, 89, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .exam-row-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: right;
+    }
+
+    .exam-highlight-value {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(29, 64, 89, 0.08), rgba(196, 166, 91, 0.1));
+      color: var(--primary);
+      border-radius: 50px;
+      padding: 3px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    /* Comparison table (visible on larger screens as complement) */
+    .exam-compare-table {
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(29, 64, 89, 0.08);
+      border: 1px solid rgba(29, 64, 89, 0.07);
+    }
+
+    .exam-compare-table table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+    }
+
+    .exam-compare-table thead tr {
+      background: linear-gradient(135deg, var(--primary), #1b5280);
+    }
+
+    .exam-compare-table thead th {
+      padding: 16px 20px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+    }
+
+    .exam-compare-table thead th:not(:first-child) {
+      text-align: center;
+    }
+
+    .exam-compare-table thead th:first-child {
+      border-radius: 0;
+    }
+
+    .exam-compare-table tbody tr {
+      border-bottom: 1px solid rgba(29, 64, 89, 0.07);
+      transition: background 0.2s;
+    }
+
+    .exam-compare-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .exam-compare-table tbody tr:hover {
+      background: rgba(29, 64, 89, 0.03);
+    }
+
+    .exam-compare-table tbody tr:nth-child(even) {
+      background: rgba(29, 64, 89, 0.025);
+    }
+
+    .exam-compare-table tbody tr:nth-child(even):hover {
+      background: rgba(29, 64, 89, 0.05);
+    }
+
+    .exam-compare-table td {
+      padding: 14px 20px;
+      color: var(--text-dark);
+      vertical-align: middle;
+    }
+
+    .exam-compare-table td:first-child {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.88rem;
+    }
+
+    .exam-compare-table td:not(:first-child) {
+      text-align: center;
+    }
+
+    .exam-compare-table .col-mcq {
+      background: rgba(29, 64, 89, 0.04);
+    }
+
+    .exam-compare-table .col-practical {
+      background: rgba(196, 166, 91, 0.05);
+    }
+
+    .exam-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .exam-tag.blue {
+      background: rgba(29, 64, 89, 0.1);
+      color: var(--primary);
+    }
+
+    .exam-tag.gold {
+      background: rgba(196, 166, 91, 0.15);
+      color: #a07520;
+    }
+
+    .exam-tag.gray {
+      background: rgba(120, 120, 120, 0.1);
+      color: #666;
+    }
+
+    /* ======= SECTION 3 – CTA (re-use common) ======= */
+    .cd-cta {
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <div class="header-wrapper-section" id="headerWrapper">
+    <nav class="navbar navbar-expand-lg" id="mainNavbar2"
+      style="background: white; backdrop-filter: blur(6px); transition: all 0.3s ease-in-out;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Silver Edge IT Solutions" class="nav-logo"
+            style="transition: all 0.3s ease-in-out;">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <i class="fa-solid fa-bars fs-2"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav align-items-lg-center align-items-start">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item custom-dropdown d-lg-block d-flex flex-wrap align-items-center justify-content-between">
+              <a class="nav-link border-0 active" href="courses.html">Our Courses</a>
+              <i class="fas fa-chevron-down mobile-dropdown-toggle d-lg-none"
+                style="cursor: pointer; padding: 10px; color: inherit;"></i>
+              <ul class="drop-down-links w-100">
+                <li><a href="courses.html"> EC-Council</a></li>
+                <li><a href="courses.html"> ISACA</a></li>
+                <li><a href="courses.html"> CompTIA</a></li>
+                <li><a href="courses.html"> PMI</a></li>
+                <li><a href="courses.html"> Offsec</a></li>
+                <li><a href="courses.html"> AWS</a></li>
+                <li><a href="courses.html"> Microsoft</a></li>
+                <li><a href="courses.html"> Palo Alto</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="ms-lg-3 d-none d-xl-flex">
+          <a href="contact.html" class="btn-enroll" style="padding:10px 22px; font-size:0.88rem;">
+            <i class="fas fa-phone"></i> +91 XXXXX XXXXX
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header-cd">
+    <div class="container position-relative" style="z-index:2;">
+      <div class="row">
+        <div class="col-lg-8" data-aos="fade-up">
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="courses.html">Our Courses</a></li>
+              <li class="breadcrumb-item active">CEH v13 AI</li>
+            </ol>
+          </nav>
+          <h1 class="mt-2">Certified Ethical Hacker <span style="color: var(--gold);">v13 AI</span></h1>
+          <p class="text-white-50 mt-2 mb-0" style="font-size:1.05rem;">
+            World's #1 Ethical Hacking Certification — EC-Council
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SECTION 1 — COURSE INTRO
+  ===================================================== -->
+  <section class="course-intro-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- LEFT: Content -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="course-badge">
+            <i class="fas fa-award"></i> EC-Council | CEH v13
+          </span>
+          <h2>Master the Art of <span>Ethical Hacking</span> with AI</h2>
+          <p class="course-lead">
+            CEH v13 is the world's most advanced Certified Ethical Hacker program that uses AI-powered tools,
+            techniques, and the NICE 2.0 Framework to train the next generation of cyber defenders.
+          </p>
+
+          <!-- Stats Pills -->
+          <div class="course-stats" data-aos="fade-up" data-aos-delay="50">
+            <div class="stat-pill"><i class="fas fa-clock"></i> 48 Hours Training</div>
+            <div class="stat-pill"><i class="fas fa-calendar-alt"></i> Weekday &amp; Weekend Batches</div>
+            <div class="stat-pill"><i class="fas fa-laptop"></i> Online &amp; Classroom</div>
+            <div class="stat-pill"><i class="fas fa-certificate"></i> EC-Council Certified</div>
+          </div>
+
+          <!-- Highlights List -->
+          <ul class="course-highlights" data-aos="fade-up" data-aos-delay="100">
+            <li><i class="fas fa-check-circle"></i> 20 Comprehensive Modules</li>
+            <li><i class="fas fa-check-circle"></i> 3,500+ Hacking Tools Covered</li>
+            <li><i class="fas fa-check-circle"></i> iLabs Cyber Range Access</li>
+            <li><i class="fas fa-check-circle"></i> AI-driven Attack Simulations</li>
+            <li><i class="fas fa-check-circle"></i> NICE 2.0 Framework Aligned</li>
+            <li><i class="fas fa-check-circle"></i> Expert-led Live Sessions</li>
+            <li><i class="fas fa-check-circle"></i> Lifetime LMS Access</li>
+            <li><i class="fas fa-check-circle"></i> Job Placement Assistance</li>
+          </ul>
+
+          <!-- Buttons -->
+          <div class="course-btns" data-aos="fade-up" data-aos-delay="150">
+            <a href="contact.html" class="btn-enroll">
+              <i class="fas fa-graduation-cap"></i> Enroll Now
+            </a>
+            <a href="#" class="btn-brochure" download>
+              <i class="fas fa-download"></i> Download Brochure
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Image -->
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+          <div class="course-img-card">
+            <img src="https://img.freepik.com/free-photo/hacker-using-computer-dark-room_23-2150918884.jpg"
+              alt="CEH v13 AI Ethical Hacking Course" style="height: 420px; object-fit: cover;">
+            <div class="course-img-overlay"></div>
+            <div class="course-img-badge">
+              <div class="badge-icon">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <div class="badge-text">
+                <strong>Globally Recognized Certification</strong>
+                <span>Accepted in 100+ countries worldwide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SECTION 2 — EXAM DETAILS
+  ===================================================== -->
+  <section class="exam-details-section" id="exam-details">
+    <div class="container position-relative" style="z-index:2;">
+
+      <!-- Section header -->
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <h2>Exam <span class="text-gold">Details</span></h2>
+        <p>Everything you need to know about the CEH v13 certification exams.</p>
+      </div>
+
+      <!-- ── CARD GRID ── -->
+      <div class="exam-cards-grid mb-5">
+
+        <!-- MCQ Exam Card -->
+        <div class="exam-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="exam-card-header mcq">
+            <div class="exam-card-icon"><i class="fas fa-list-check"></i></div>
+            <div>
+              <h4>CEH v13 — MCQ Exam</h4>
+              <p>Theory &amp; Knowledge Test</p>
+            </div>
+          </div>
+          <div class="exam-card-body">
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-file-alt"></i> Exam Format
+              </div>
+              <div class="exam-row-value">Multiple Choice Questions</div>
+            </div>
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-question-circle"></i> No. of Questions
+              </div>
+              <div class="exam-row-value">
+                <span class="exam-highlight-value">125 Questions</span>
+              </div>
+            </div>
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-clock"></i> Exam Duration
+              </div>
+              <div class="exam-row-value">4 Hours</div>
+            </div>
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-chart-line"></i> Passing Score
+              </div>
+              <div class="exam-row-value">
+                <span class="exam-highlight-value">60 – 80%</span>
+              </div>
+            </div>
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-desktop"></i> Exam Delivery
+              </div>
+              <div class="exam-row-value">VUE / ECCEXAM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practical Exam Card -->
+        <div class="exam-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="exam-card-header practical">
+            <div class="exam-card-icon"><i class="fas fa-terminal"></i></div>
+            <div>
+              <h4>CEH v13 — Practical Exam</h4>
+              <p>Hands-on Cyber Range Test</p>
+            </div>
+          </div>
+          <div class="exam-card-body">
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-file-alt"></i> Exam Format
+              </div>
+              <div class="exam-row-value">iLabs Cyber Range</div>
+            </div>
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-question-circle"></i> No. of Questions
+              </div>
+              <div class="exam-row-value">
+                <span class="exam-highlight-value">20 Questions</span>
+              </div>
+            </div>
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-clock"></i> Exam Duration
+              </div>
+              <div class="exam-row-value">4 Hours</div>
+            </div>
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-chart-line"></i> Passing Score
+              </div>
+              <div class="exam-row-value">
+                <span class="exam-highlight-value">70%</span>
+              </div>
+            </div>
+            <div class="exam-row">
+              <div class="exam-row-label">
+                <i class="fas fa-desktop"></i> Exam Delivery
+              </div>
+              <div class="exam-row-value">—</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── COMPARISON TABLE ── -->
+      <div class="exam-compare-table" data-aos="fade-up" data-aos-delay="150">
+        <table>
+          <thead>
+            <tr>
+              <th width="28%"><i class="fas fa-table me-2"></i>Certification Details</th>
+              <th class="col-mcq">CEH v13 (MCQ Exam)</th>
+              <th class="col-practical">CEH v13 (Practical Exam)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Exam Format</td>
+              <td><span class="exam-tag blue">Multiple Choice Questions</span></td>
+              <td><span class="exam-tag gold">iLabs Cyber Range</span></td>
+            </tr>
+            <tr>
+              <td>Number of Questions</td>
+              <td>125 Questions</td>
+              <td>20 Questions</td>
+            </tr>
+            <tr>
+              <td>Exam Duration</td>
+              <td>4 Hours</td>
+              <td>4 Hours</td>
+            </tr>
+            <tr>
+              <td>Passing Score</td>
+              <td><span class="exam-tag blue">60 – 80%</span></td>
+              <td><span class="exam-tag gold">70%</span></td>
+            </tr>
+            <tr>
+              <td>Exam Delivery</td>
+              <td>VUE / ECCEXAM</td>
+              <td><span class="exam-tag gray">—</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section-padding position-relative" id="">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <!-- <h6 class="text-gold fw-semibold text-uppercase"><i class="fas fa-quote-left me-2"></i>Reviews</h6> -->
+        <h2>What Our Studends<span class="text-gold"> Say</span></h2>
+        <p>Silver Edge IT Solutions transformed our security posture. Their team
+          identified critical vulnerabilities and implemented robust solutions within weeks.</p>
+      </div>
+      <!-- Owl Carousel -->
+      <div class="owl-carousel studentReviews" data-aos="fade-up" data-aos-delay="100">
+        <div class="item">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">"Silver Edge IT Solutions transformed our security posture. Their team
+              identified critical vulnerabilities and implemented robust solutions within weeks."</p>
+            <div class="client-info">
+              <div class="client-avatar">AM</div>
+              <div>
+                <div class="client-name">Aakash Mishra</div>
+                <div class="client-role">VP Engineering, DataShield</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 1 -->
+        <div class="item">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Silver Edge IT Solutions transformed our security posture. Their team
+              identified critical vulnerabilities and implemented robust solutions within weeks."</p>
+            <div class="client-info">
+              <div class="client-avatar">RK</div>
+              <div>
+                <div class="client-name">Rajesh Kumar</div>
+                <div class="client-role">CTO, FinServe India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="item">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Silver Edge IT Solutions transformed our security posture. Their team
+              identified critical vulnerabilities and implemented robust solutions within weeks."</p>
+            <div class="client-info">
+              <div class="client-avatar">SP</div>
+              <div>
+                <div class="client-name">Shalini Patel</div>
+                <div class="client-role">Security Analyst, TechCorp</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="item">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">"Silver Edge IT Solutions transformed our security posture. Their team
+              identified critical vulnerabilities and implemented robust solutions within weeks."</p>
+            <div class="client-info">
+              <div class="client-avatar">AM</div>
+              <div>
+                <div class="client-name">Aakash Mishra</div>
+                <div class="client-role">VP Engineering, DataShield</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq-section section-padding  section-bg  position-relative">
+    <div class="container">
+      <div>
+        <div class="section-header" data-aos="fade-up">
+          <!-- <h6 class="text-gold fw-semibold text-uppercase"><i class="fas fa-question-circle me-2"></i>FAQ</h6> -->
+          <h2>Frequently Asked <span class="text-gold"> Questions</span></h2>
+          <p>Answers to common questions about our courses, certifications, and training programs.</p>
+        </div>
+      </div>
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="rounded-3 overflow-hidden">
+            <img src="images/home/faq.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-7">
+
+          <!-- Accordion -->
+          <div class="accordion" id="faqAccordion">
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  What is CISSP Certification?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  CISSP is a globally recognized certification in cybersecurity that validates your expertise in
+                  security
+                  practices.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  How long is the training duration?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  The training duration typically ranges from 3 to 7 days depending on the course.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Do you provide certification vouchers?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, we provide official certification exam vouchers at discounted prices.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Is this course suitable for beginners?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Some courses are beginner-friendly, but certifications like CISSP require prior experience.
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====================================================
+       CTA
+  ===================================================== -->
+  <section class="section-padding cta-section text-center">
+    <div class="container position-relative" style="z-index:2;">
+      <div data-aos="zoom-in">
+        <h2>Ready to Become a Certified Ethical Hacker?</h2>
+        <p>Enroll today and start your cybersecurity career with a world-class certification.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-gold btn-lg">
+            <i class="fas fa-graduation-cap me-2"></i>Enroll Now
+          </a>
+          <a href="#" class="btn btn-outline-light btn-lg" download>
+            <i class="fas fa-download me-2"></i>Download Brochure
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       FOOTER
+  ===================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h5>Silver Edge IT Solutions</h5>
+          <p>A leading cyber security company providing advanced security solutions, training, and certifications.</p>
+          <div class="footer-social mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
+            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> Solutions</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Our Courses</h5>
+          <ul class="footer-links">
+            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> EC-Council CEH</a></li>
+            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> CompTIA Security+</a></li>
+            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> ISACA CISM</a></li>
+            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Offsec OSCP</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Contact Info</h5>
+          <ul class="footer-contact list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i> <span>123, Cyber Tower, Sector 62, Noida, India</span></li>
+            <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
+            <li><i class="fas fa-envelope"></i> <span>info@silveredgeitsolutions.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Silver Edge IT Solutions. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+  <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Navbar scroll: dark bg → white on scroll
+    // const hw = document.getElementById('headerWrapper');
+    // const nav2 = document.getElementById('mainNavbar2');
+    // window.addEventListener('scroll', () => {
+    //   if (window.scrollY > 80) {
+    //     hw.classList.add('navbar-scrolled');
+    //     nav2.style.background = 'transparent';
+    //   } else {
+    //     hw.classList.remove('navbar-scrolled');
+    //     nav2.style.background = 'white';
+    //   }
+    // }); 
+  </script>
+
+</body>
+
+</html>

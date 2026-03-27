@@ -15,31 +15,65 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .header-wrapper-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-scrolled {
+      background-color: var(--white) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Links scrolled state (White Background) */
+    /* .navbar-scrolled #mainNavbar2 .nav-link {
+      color: var(--text-dark) !important;
+    } */
+
+    /* .navbar-scrolled #mainNavbar2 .nav-link:hover,
+    .navbar-scrolled #mainNavbar2 .nav-link.active {
+      color: var(--primary) !important;
+    } */
+
+    /* Keep phone button white */
+    /* .navbar-scrolled #mainNavbar2 .btn-nav-cta.text-white {
+      color: #fff !important;
+    } */
+
+    /* Toggler button icon color */
+    /* .navbar-scrolled .navbar-toggler i {
+      color: var(--text-dark) !important;
+    } */
+
+    /* .navbar-toggler i {
+      color: var(--white);
+      transition: color 0.3s ease-in-out;
+    } */
+
+    /* .light-text {
+      color: rgb(173, 173, 173);
+      font-size: 12px;
+    } */
+
+    /* Dropdown CSS moved to style.css */
+  </style>
 </head>
 
 <body>
   <!-- TOP HEADER -->
-  <div class="top-header d-none d-md-block">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center gap-4">
-          <a href="mailto:info@silveredgeitsolutions.com"><i class="fas fa-envelope"></i>
-            info@silveredgeitsolutions.com</a>
-          <a href="tel:+919876543210"><i class="fas fa-phone"></i> +91 98765 43210</a>
-        </div>
-        <div class="d-flex align-items-center gap-3">
-          <span class="me-2"><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</span>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg sticky-top">
+  <!-- <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <div class="brand-text"><strong>Silver Edge</strong><span>IT Solutions</span></div>
@@ -59,7 +93,49 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
+  <div class="header-wrapper-section" id="headerWrapper">
+    <nav class="navbar navbar-expand-lg pt-lg-4" id="mainNavbar2">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-text">
+            <img src="images/logo.png" alt="" class="nav-logo" style="transition: all 0.3s ease-in-out;">
+          </div>
+        </a>
+        <button class="navbar-toggler  border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <i class="fa-solid fa-bars fs-2"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-sm-start justify-content-center" id="mainNav">
+          <ul class="navbar-nav align-items-lg-center align-items-start ">
+            <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item custom-dropdown d-lg-block d-flex flex-wrap align-items-center justify-content-between">
+              <a class="nav-link border-0" href="courses.html">Our Courses</a>
+              <i class="fas fa-chevron-down mobile-dropdown-toggle d-lg-none"
+                style="cursor: pointer; padding: 10px; color: inherit;"></i>
+              <ul class="drop-down-links w-100">
+                <li><a href="courses.html"> EC-Council</a></li>
+                <li><a href="courses.html"> ISACA</a></li>
+                <li><a href="courses.html"> CompTIA</a></li>
+                <li><a href="courses.html"> PMI</a></li>
+                <li><a href="courses.html"> Offsec</a></li>
+                <li><a href="courses.html"> AWS</a></li>
+                <li><a href="courses.html"> Microsoft</a></li>
+                <li><a href="courses.html"> Palo Alto</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="w-sm-100 ms-lg-2 d-flex justify-content-center d-none d-xl-block">
+          <a class="nav-link btn-nav-cta text-white" href="#" data-bs-toggle="modal">
+            <i class="fas fa-phone"></i> +91 XXXXX XXXXX
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
   <!-- PAGE HEADER -->
   <section class="page-header">
     <div class="container">
@@ -72,286 +148,134 @@
       </nav>
     </div>
   </section>
-  <!-- COURSES -->
-  <section class="section-padding">
+  <!-- ========== OUR COURSES SECTION ========== -->
+  <section class="section-padding section-bg position-relative" id="courses">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h6 class="text-gold fw-semibold text-uppercase"><i class="fas fa-graduation-cap me-2"></i>Certification
-          Programs</h6>
-        <h2>Explore Our Courses</h2>
-        <p>Choose from globally recognized cyber security certification programs.</p>
+        <h2>Industry-Leading <span>Certifications</span></h2>
       </div>
-      <div class="filter-btns" data-aos="fade-up">
-        <button class="btn-filter active" data-filter="all">All Courses</button>
-        <button class="btn-filter" data-filter="cyber-defentech">Cyber Defentech</button>
-        <button class="btn-filter" data-filter="ec-council">EC-Council</button>
-        <button class="btn-filter" data-filter="comptia">CompTIA</button>
-        <button class="btn-filter" data-filter="offsec">Offsec</button>
-        <button class="btn-filter" data-filter="cisco">CISCO</button>
-        <button class="btn-filter" data-filter="aws">AWS</button>
-      </div>
-      <div class="row g-4" id="courseGrid">
-        <!-- Cyber Defentech -->
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cyber-defentech">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-network-wired"></i></div>
-            <h4>Networking Fundamentals</h4>
-            <p>Master networking concepts, protocols, and infrastructure — the backbone of cyber security.</p><span
-              class="badge mb-3" style="background:var(--gold);color:#fff;">Cyber Defentech</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cyber-defentech">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-bug"></i></div>
-            <h4>Network Penetration Testing</h4>
-            <p>Test network defenses, find vulnerabilities, and report security weaknesses professionally.</p><span
-              class="badge mb-3" style="background:var(--gold);color:#fff;">Cyber Defentech</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cyber-defentech">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fab fa-python"></i></div>
-            <h4>Python for Cyber Security</h4>
-            <p>Automate security tasks and build tools using Python for ethical hacking.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">Cyber Defentech</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cyber-defentech">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fab fa-linux"></i></div>
-            <h4>Linux for Hackers</h4>
-            <p>Master Linux OS — essential for penetration testing and server administration.</p><span
-              class="badge mb-3" style="background:var(--gold);color:#fff;">Cyber Defentech</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cyber-defentech">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-globe"></i></div>
-            <h4>Web App Pen Testing</h4>
-            <p>Discover and exploit web vulnerabilities like SQL injection, XSS, and more.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">Cyber Defentech</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cyber-defentech">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-eye"></i></div>
-            <h4>SOC Operations</h4>
-            <p>Learn SOC operations, SIEM tools, threat analysis, and incident handling.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">Cyber Defentech</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cyber-defentech">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-magnifying-glass"></i></div>
-            <h4>Digital Forensics</h4>
-            <p>Investigate cyber crimes, recover evidence, and learn forensic analysis.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">Cyber Defentech</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cyber-defentech">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-cloud-arrow-up"></i></div>
-            <h4>Cloud Security</h4>
-            <p>Secure cloud environments with AWS, Azure, and GCP best practices.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">Cyber Defentech</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
+      <div class="row g-4">
         <!-- EC-Council -->
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="ec-council">
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-user-shield"></i></div>
-            <h4>CEH v13 - Ethical Hacker</h4>
-            <p>World's most popular ethical hacking certification to defend systems.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">EC-Council</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
+            <div class="card-icon"> <img src="images/courses/ec-councll.png" alt="ec-council"></div>
+            <h4>EC-Council</h4>
+            <p>CEH, CPENT, CCSE, CHFI & more ethical hacking certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="ec-council">
+        <!-- ISACA -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="50">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-crosshairs"></i></div>
-            <h4>CPENT - Pen Testing Professional</h4>
-            <p>Advanced pen testing covering IoT, OT, and enterprise environments.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">EC-Council</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="ec-council">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-fingerprint"></i></div>
-            <h4>CHFI - Forensic Investigator</h4>
-            <p>Digital forensics, evidence collection, and investigation methodologies.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">EC-Council</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="ec-council">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-shield-virus"></i></div>
-            <h4>CSA - SOC Analyst</h4>
-            <p>SOC operations, threat monitoring, log management & SIEM certification.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">EC-Council</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="ec-council">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-bell"></i></div>
-            <h4>ECIH - Incident Handling</h4>
-            <p>Structured incident response and handling methodologies.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">EC-Council</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="ec-council">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-network-wired"></i></div>
-            <h4>CND - Network Defender</h4>
-            <p>Network defense strategies, securing enterprise infrastructure.</p><span class="badge mb-3"
-              style="background:var(--gold);color:#fff;">EC-Council</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
+            <div class="card-icon"> <img src="images/courses/isaca.png" alt="isaca"></div>
+            <h4>ISACA</h4>
+            <p>CISA, CISM, CRISC and governance certifications for IT audit.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
         <!-- CompTIA -->
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="comptia">
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-            <h4>CompTIA Security+</h4>
-            <p>Foundational certification for network security and compliance.</p><span class="badge mb-3"
-              style="background:#3498db;color:#fff;">CompTIA</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="comptia">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-server"></i></div>
-            <h4>CompTIA Network+</h4>
-            <p>Networking concepts, operations, and security fundamentals.</p><span class="badge mb-3"
-              style="background:#3498db;color:#fff;">CompTIA</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="comptia">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
-            <h4>CompTIA CySA+</h4>
-            <p>Behavioral analytics and threat detection certification.</p><span class="badge mb-3"
-              style="background:#3498db;color:#fff;">CompTIA</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="comptia">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-user-lock"></i></div>
-            <h4>CompTIA PenTest+</h4>
-            <p>Hands-on penetration testing and vulnerability assessment.</p><span class="badge mb-3"
-              style="background:#3498db;color:#fff;">CompTIA</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="comptia">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
-            <h4>CompTIA CASP+</h4>
-            <p>Advanced security practitioner for enterprise environments.</p><span class="badge mb-3"
-              style="background:#3498db;color:#fff;">CompTIA</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
+            <div class="card-icon"> <img src="images/courses/comptia.png" alt="comptia"></div>
+            <h4>CompTIA</h4>
+            <p>Security+, Network+, CySA+, CASP+ vendor-neutral certs.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
         <!-- Offsec -->
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="offsec">
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-skull-crossbones"></i></div>
-            <h4>OSCP - Certified Professional</h4>
-            <p>Gold standard in penetration testing — hands-on offensive security.</p><span class="badge mb-3"
-              style="background:#e74c3c;color:#fff;">Offsec</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="offsec">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-globe"></i></div>
-            <h4>OSWA - Web Assessor</h4>
-            <p>Offensive web application security assessment techniques.</p><span class="badge mb-3"
-              style="background:#e74c3c;color:#fff;">Offsec</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="offsec">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-binoculars"></i></div>
-            <h4>OSTH - Threat Hunter</h4>
-            <p>Advanced threat hunting and proactive defense techniques.</p><span class="badge mb-3"
-              style="background:#e74c3c;color:#fff;">Offsec</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <!-- CISCO -->
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cisco">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-network-wired"></i></div>
-            <h4>CCNA - Cisco Certified</h4>
-            <p>Networking fundamentals, IP services, security with Cisco technologies.</p><span class="badge mb-3"
-              style="background:#1ba94c;color:#fff;">CISCO</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="cisco">
-          <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
-            <h4>CCNP - Advanced Networking</h4>
-            <p>Advanced routing, switching, and enterprise network infrastructure.</p><span class="badge mb-3"
-              style="background:#1ba94c;color:#fff;">CISCO</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
+            <div class="card-icon"> <img src="images/courses/Offsec.png" alt="offsec"></div>
+            <h4>Offsec</h4>
+            <p>OSCP, OSWA, OSTH advanced penetration testing courses.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
         <!-- AWS -->
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="aws">
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fab fa-aws"></i></div>
-            <h4>AWS Solutions Architect</h4>
-            <p>Design distributed systems and architectures on AWS.</p><span class="badge mb-3"
-              style="background:#ff9900;color:#fff;">AWS</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
+            <div class="card-icon"> <img src="images/courses/aws.png" alt="aws"></div>
+            <h4>AWS</h4>
+            <p>Solutions Architect, Developer, SysOps & DevOps certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="aws">
+        <!-- PMI -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-code"></i></div>
-            <h4>AWS Developer – Associate</h4>
-            <p>Develop and deploy cloud-based applications using AWS.</p><span class="badge mb-3"
-              style="background:#ff9900;color:#fff;">AWS</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
+            <div class="card-icon"> <img src="images/courses/pmi.png" alt="pmi"></div>
+            <h4>PMI</h4>
+            <p>PMP, CAPM project management professional certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="aws">
+        <!-- Microsoft -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-cogs"></i></div>
-            <h4>AWS SysOps Administrator</h4>
-            <p>Manage workloads on AWS with high availability and security.</p><span class="badge mb-3"
-              style="background:#ff9900;color:#fff;">AWS</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
+            <div class="card-icon"> <img src="images/courses/microsoft.png" alt="microsoft"></div>
+            <h4>Microsoft</h4>
+            <p>Azure, Microsoft 365 & security compliance certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 course-filter-item" data-category="aws">
+        <!-- Palo Alto -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-layer-group"></i></div>
-            <h4>AWS DevOps Engineer – Pro</h4>
-            <p>Expert-level DevOps on AWS for enterprise CI/CD pipelines.</p><span class="badge mb-3"
-              style="background:#ff9900;color:#fff;">AWS</span><br><a href="#"
-              class="btn btn-outline-primary btn-sm">Read More</a>
+            <div class="card-icon"> <img src="images/courses/Paloalto.png" alt="paloalto"></div>
+            <h4>Palo Alto</h4>
+            <p>PCNSA, PCNSE network security & firewall certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
+          </div>
+        </div>
+        <!-- Google -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+          <div class="course-card glow-on-hover">
+            <div class="card-icon"> <img src="images/courses/google.png" alt="google"></div>
+            <h4>Google</h4>
+            <p>Google Cloud, cybersecurity professional certificates.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
+          </div>
+        </div>
+        <!-- Oracle -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="course-card glow-on-hover">
+            <div class="card-icon"> <img src="images/courses/oracle.png" alt="oracle"></div>
+            <h4>Oracle</h4>
+            <p>Oracle Cloud Infrastructure & database security certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
+          </div>
+        </div>
+        <!-- Splunk -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="50">
+          <div class="course-card glow-on-hover">
+            <div class="card-icon"> <img src="images/courses/splunk.png" alt="splunk"></div>
+            <h4>Splunk</h4>
+            <p>SIEM, data analytics & security operations certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
+          </div>
+        </div>
+        <!-- VMware -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="course-card glow-on-hover">
+            <div class="card-icon"> <img src="images/courses/vmware.png" alt="vmware"></div>
+            <h4>VMware</h4>
+            <p>Virtualization, cloud management & data center certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
+          </div>
+        </div>
+        <!-- ISC² -->
+        <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="course-card glow-on-hover">
+            <div class="card-icon"> <img src="images/courses/isc2.png" alt="isc2"></div>
+            <h4>ISC²</h4>
+            <p>CISSP, CCSP & SSCP global security professional certifications.</p>
+            <a href="course-detail.html" class="btn-outline-primary btn-sm">Read More</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <!-- CTA -->
   <section class="section-padding cta-section text-center">
     <div class="container position-relative" style="z-index:2;">
