@@ -28,8 +28,206 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
+  <!-- ===footer-1-style=== -->
+  <style>
+    .inquiry-section {
+      /* background: var(--section-bg);
+              padding: 70px 0; */
+    }
 
+    /* Card */
+    .inquiry-card {
+      /* background: var(--white); */
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      /* padding: 40px; */
+      transition: var(--transition);
+      background-color: #ffffff;
+    }
 
+    .inquiry-card {
+      padding: 26px;
+      /* background-color: #132a528a */
+    }
+
+    .inquiry-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Title */
+    .inquiry-title {
+      margin-bottom: 25px;
+    }
+
+    .inquiry-title h2 {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .inquiry-title p {
+      color: var(--text-muted);
+    }
+
+    /* Form Controls */
+    .form-control,
+    .form-select {
+      border-radius: 6px;
+      /* border: 1px solid var(--border-color); */
+      padding: 6px 8px;
+      transition: var(--transition);
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 0.15rem rgba(47, 148, 219, 0.25);
+    }
+
+    /* Button */
+    .btn-custom {
+      background: var(--gold);
+      color: var(--white);
+      border: none;
+      padding: 12px 25px;
+      border-radius: var(--radius);
+      font-weight: 500;
+      transition: var(--transition);
+      font-size: 14px;
+    }
+
+    .btn-custom:hover {
+      background: var(--gold-dark);
+    }
+
+    .inquiry-card input,
+    .inquiry-card select,
+    .inquiry-card textarea {
+      font-size: 14px;
+    }
+
+    .inquiry-card input::placeholder,
+    .inquiry-card textarea::placeholder,
+    .inquiry-card select::placeholder {
+      font-size: 14px;
+    }
+  </style>
+
+  <!-- ====Footer-2-style==== -->
+  <style>
+    /* Section */
+    .contact-section {
+      background: var(--section-bg);
+      padding: 60px 0;
+    }
+
+    /* Card */
+    .contact-card {
+      /* background: var(--white); */
+      /* border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px; */
+    }
+
+    /* Left Side */
+    .contact-left h4 {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .contact-left p {
+      color: var(--text-muted);
+      margin: 15px 0 25px;
+    }
+
+    /* Contact Items */
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      background: #e5e5e5;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .contact-info span {
+      display: block;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .contact-info strong {
+      color: var(--text-dark);
+    }
+
+    /* Right Form */
+    .contact-form h4 {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .contact-form p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    /* Inputs */
+    .form-control {
+      background: var(--light-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 12px 15px;
+    }
+
+    .form-control:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 0.15rem rgba(47, 148, 219, 0.25);
+    }
+
+    /* Button */
+    .btn-submit {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border: none;
+      color: var(--white);
+      padding: 12px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .btn-submit:hover {
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    .contact-footer {
+      border-top: 1px solid var(--border-color);
+      margin-top: 30px;
+      padding-top: 15px;
+      font-size: 14px;
+      color: var(--text-muted);
+      /* display: flex; */
+      /* justify-content: space-between; */
+      flex-wrap: wrap;
+    }
+
+    .ft-our-courses li a {
+      color: var(--text-dark)
+    }
+
+    .ft-our-courses li {
+      padding-bottom: 10px;
+    }
+  </style>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -300,14 +498,14 @@
                 <i class="fas fa-chevron-down mobile-dropdown-toggle d-lg-none"
                   style="cursor: pointer; padding: 10px; color: inherit;"></i>
                 <ul class="drop-down-links w-100">
-                  <li><a href="courses.html"><i class="fas fa-chevron-right"></i> EC-Council</a></li>
-                  <li><a href="courses.html"><i class="fas fa-chevron-right"></i> ISACA</a></li>
-                  <li><a href="courses.html"><i class="fas fa-chevron-right"></i> CompTIA</a></li>
-                  <li><a href="courses.html"><i class="fas fa-chevron-right"></i> PMI</a></li>
-                  <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Offsec</a></li>
-                  <li><a href="courses.html"><i class="fas fa-chevron-right"></i> AWS</a></li>
-                  <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Microsoft</a></li>
-                  <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Palo Alto</a></li>
+                  <li><a href="courses.html"> EC-Council</a></li>
+                  <li><a href="courses.html"> ISACA</a></li>
+                  <li><a href="courses.html"> CompTIA</a></li>
+                  <li><a href="courses.html"> PMI</a></li>
+                  <li><a href="courses.html"> Offsec</a></li>
+                  <li><a href="courses.html"> AWS</a></li>
+                  <li><a href="courses.html"> Microsoft</a></li>
+                  <li><a href="courses.html"> Palo Alto</a></li>
                 </ul>
               </li>
               <!-- <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li> -->
@@ -317,55 +515,14 @@
           </div>
           <div class="w-sm-100 ms-lg-2 d-flex justify-content-center d-none d-xl-block">
             <a class="nav-link btn-nav-cta text-white" href="#" data-bs-toggle="modal">
-              <i class="fas fa-phone"></i> +91 xxxxx xxxxx
+              <i class="fas fa-phone"></i> +91 XXXXX XXXXX
             </a>
           </div>
         </div>
       </nav>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const headerWrapper = document.getElementById("headerWrapper");
-        const navbar = document.getElementById("mainNavbar2");
-        const logo = navbar.querySelector(".nav-logo");
 
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 100) {
-            headerWrapper.classList.add("navbar-scrolled");
-            navbar.classList.remove("pt-lg-4");
-            navbar.classList.add("py-2");
-            // Switch logo to the dark version if available
-            logo.src = "images/logo3.png";
-          } else {
-            headerWrapper.classList.remove("navbar-scrolled");
-            navbar.classList.remove("py-2");
-            navbar.classList.add("pt-lg-4");
-            // Switch back to light logo
-            logo.src = "images/logo.png";
-          }
-        });
-
-        // Mobile dropdown toggle script
-        const dropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
-        dropdownToggles.forEach(toggle => {
-          toggle.addEventListener("click", function (e) {
-            e.preventDefault();
-            const dropdown = this.closest(".custom-dropdown").querySelector(".drop-down-links");
-            dropdown.classList.toggle("show");
-
-            // Optional visually flip chevron icon
-            if (dropdown.classList.contains("show")) {
-              this.classList.remove("fa-chevron-down");
-              this.classList.add("fa-chevron-up");
-            } else {
-              this.classList.remove("fa-chevron-up");
-              this.classList.add("fa-chevron-down");
-            }
-          });
-        });
-      });
-    </script>
 
     <div class="container position-relative w-100" style="z-index: 2;">
       <div class="hero-content mx-auto " style="padding-top: 140px;">
@@ -468,6 +625,39 @@
     </div>
   </section>
 
+  <!-- ========== ABOUT PREVIEW SECTION ========== -->
+  <section class="section-padding about-preview position-relative section-bg" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="about-img-wrapper">
+            <img src="images/home-intro.png" alt="About Silver Edge" class="img-fluid rounded-4">
+          </div>
+          <div class="experience-badge" data-aos="zoom-in" data-aos-delay="300">
+            <h3>20+</h3>
+            <p>Years of Experience</p>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <!-- <h6 class="text-gold fw-semibold text-uppercase mb-2"><i class="fas fa-shield-halved me-2"></i>Who We Are</h6> -->
+          <h2>Start your career with <span class="text-gold">Silver Edge IT Solutions</span></h2>
+          <p class="mt-3">We teach you everything you need to know about Information Technology through our online
+            course to ensure you have the skills and knowledge to land an entry-level position.</p>
+          <p>Start an amazing career with no degree or experience and be on track to make over $50,000 your first year
+            and potentially $80,000+ in the following years.</p>
+          <p>This works for people coming from all backgrounds whether you’re an 18-year-old using our program as a
+            college alternative or are looking to make a career change later in life.</p>
+          <!-- <ul class="about-list mt-4">
+            <li><i class="fas fa-check-circle"></i> Certified & Experienced Security Professionals</li>
+            <li><i class="fas fa-check-circle"></i> Hands-on Training & Industry Certifications</li>
+
+          </ul> -->
+          <a href="about.html" class="btn btn-primary-custom mt-4"><i class="fas fa-arrow-right me-2"></i>Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== Trending-Certifications ========== -->
   <section class="section-padding" id="industries">
     <div class="container">
@@ -555,41 +745,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ========== ABOUT PREVIEW SECTION ========== -->
-  <!-- <section class="section-padding about-preview position-relative" id="about">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6" data-aos="fade-right">
-          <div class="about-img-wrapper">
-            <img
-              src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg"
-              alt="About Silver Edge" class="img-fluid rounded-4">
-          </div>
-          <div class="experience-badge" data-aos="zoom-in" data-aos-delay="300">
-            <h3>10+</h3>
-            <p>Years of Experience</p>
-          </div>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <h6 class="text-gold fw-semibold text-uppercase mb-2"><i class="fas fa-shield-halved me-2"></i>Who We Are</h6>
-          <h2>Your Trusted Partner in <span class="text-gold">Cyber Security</span></h2>
-          <p class="mt-3">Silver Edge IT Solutions is a leading cyber security company dedicated to protecting
-            businesses from the ever-evolving landscape of digital threats. Our team of certified experts delivers
-            comprehensive solutions tailored to your unique security needs.</p>
-          <p>With a proven track record of safeguarding organizations across multiple industries, we combine
-            cutting-edge technology with deep expertise to ensure your digital assets remain secure.</p>
-          <ul class="about-list mt-4">
-            <li><i class="fas fa-check-circle"></i> Certified & Experienced Security Professionals</li>
-            <li><i class="fas fa-check-circle"></i> Hands-on Training & Industry Certifications</li>
-            <li><i class="fas fa-check-circle"></i> 24/7 Monitoring & Rapid Incident Response</li>
-            <li><i class="fas fa-check-circle"></i> Trusted by 500+ Businesses Worldwide</li>
-          </ul>
-          <a href="about.html" class="btn btn-primary-custom mt-4"><i class="fas fa-arrow-right me-2"></i>Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- ========== OUR COURSES SECTION ========== -->
   <section class="section-padding section-bg position-relative" id="courses">
@@ -1149,25 +1304,32 @@
       </div>
       <div class="partner-carousel owl-carousel owl-theme" id="partnerOwlCarousel">
         <div class="item">
-          <div class="partner-logo"><img src="images/partners/1.png" alt=""></div>
+          <div class="partner-logo"><img src="images/courses/aws.png" alt=""></div>
         </div>
         <div class="item">
-          <div class="partner-logo"><img src="images/partners/2.png" alt=""></div>
+          <div class="partner-logo"><img src="images/courses/CISCO.png" alt=""></div>
         </div>
         <div class="item">
-          <div class="partner-logo"><img src="images/partners/3.png" alt=""></div>
+          <div class="partner-logo"><img src="images/courses/comptia.png" alt=""></div>
+        </div>
+
+        <div class="item">
+          <div class="partner-logo"><img src="images/courses/EC-Council.png" alt=""></div>
         </div>
         <div class="item">
-          <div class="partner-logo"><img src="images/partners/4.png" alt=""></div>
+          <div class="partner-logo"><img src="images/courses/isaca.png" alt=""></div>
         </div>
         <div class="item">
-          <div class="partner-logo"><img src="images/partners/5.png" alt=""></div>
+          <div class="partner-logo"><img src="images/courses/microsoft.png" alt=""></div>
         </div>
         <div class="item">
-          <div class="partner-logo"><img src="images/partners/6.png" alt=""></div>
+          <div class="partner-logo"><img src="images/courses/Offsec.png" alt=""></div>
         </div>
         <div class="item">
-          <div class="partner-logo"><img src="images/partners/7.png" alt=""></div>
+          <div class="partner-logo"><img src="images/courses/Paloalto.png" alt=""></div>
+        </div>
+        <div class="item">
+          <div class="partner-logo"><img src="images/courses/pmi.png" alt=""></div>
         </div>
       </div>
     </div>
@@ -1247,13 +1409,14 @@
 
   <section class="faq-section section-padding   position-relative">
     <div class="container">
-
-      <!-- Title -->
-      <div class="faq-title section-header">
-        <h2>Frequently Asked <span class="text-gold"> Questions</span> </h2>
-        <p>Everything you need to know about our courses and services</p>
+      <div>
+        <div class="section-header" data-aos="fade-up">
+          <!-- <h6 class="text-gold fw-semibold text-uppercase"><i class="fas fa-question-circle me-2"></i>FAQ</h6> -->
+          <h2>Frequently Asked <span class="text-gold"> Questions</span></h2>
+          <p>Answers to common questions about our courses, certifications, and training programs.</p>
+        </div>
       </div>
-
+      <!-- Title -->
       <div class="row">
         <div class="col-lg-5">
           <div class="rounded-3 overflow-hidden">
@@ -1261,9 +1424,9 @@
           </div>
         </div>
         <div class="col-lg-7">
+
           <!-- Accordion -->
           <div class="accordion" id="faqAccordion">
-
             <!-- Item 1 -->
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -1321,31 +1484,18 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
-                  Is this course suitable for beginners?
-                </button>
-              </h2>
-              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Some courses are beginner-friendly, but certifications like CISSP require prior experience.
-                </div>
-              </div>
-            </div>
+
 
           </div>
         </div>
       </div>
-
-
     </div>
   </section>
 
 
 
   <!-- ========== CTA SECTION ========== -->
-  <section class="section-padding cta-section text-center position-relative" id="cta">
+  <!-- <section class="section-padding cta-section text-center position-relative" id="cta">
     <div class="container position-relative" style="z-index: 2;">
       <div data-aos="zoom-in">
         <h2>Secure Your Business Today</h2>
@@ -1353,128 +1503,153 @@
         <a href="contact.html" class="btn btn-gold btn-lg"><i class="fas fa-lock me-2"></i>Contact Our Experts</a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ========== FOOTER ========== -->
-  <footer class="footer position-relative">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-5 col-md-6">
-          <style>
-            .inquiry-section {
-              /* background: var(--section-bg);
-              padding: 70px 0; */
-            }
+  <section class="footer-2-wrepper section-padding section-bg  position-relative">
+    <div id="footer-2">
+      <div class="container">
+        <div class="contact-card">
+          <div class="row g-4">
+            <div class="col-lg-4 ">
 
-            /* Card */
-            .inquiry-card {
-              /* background: var(--white); */
-              border-radius: var(--radius);
-              box-shadow: var(--shadow);
-              /* padding: 40px; */
-              transition: var(--transition);
-            }
+              <div class="contact-form">
+                <h4>Get In Touch</h4>
+                <p style="font-weight: 400; font-size: 14px;">We usually respond within 24 hours.</p>
 
-            .inquiry-card {
-              padding: 26px;
-              background-color: #132a528a
-            }
+                <form>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name">
+                  </div>
 
-            .inquiry-card:hover {
-              box-shadow: var(--shadow-hover);
-            }
+                  <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                  </div>
 
-            /* Title */
-            .inquiry-title {
-              margin-bottom: 25px;
-            }
+                  <div class="mb-3">
+                    <textarea class="form-control" rows="1" placeholder="Message"></textarea>
+                  </div>
 
-            .inquiry-title h2 {
-              color: var(--primary);
-              font-weight: 700;
-            }
+                  <button class="btn btn-submit w-100">Submit</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 d-flex justify-content-center">
+              <div>
 
-            .inquiry-title p {
-              color: var(--text-muted);
-            }
+                <h5>Quick Links</h5>
+                <ul class="ft-our-courses list-unstyled">
+                  <li><a href="index.html"> Home</a></li>
+                  <li><a href="about.html"> About Us</a></li>
+                  <li><a href="courses.html"> Courses</a></li>
+                  <li><a href="solutions.html"> Solutions</a></li>
 
-            /* Form Controls */
-            .form-control,
-            .form-select {
-              border-radius: 6px;
-              /* border: 1px solid var(--border-color); */
-              padding: 6px 8px;
-              transition: var(--transition);
-            }
-
-            .form-control:focus,
-            .form-select:focus {
-              border-color: var(--gold);
-              box-shadow: 0 0 0 0.15rem rgba(47, 148, 219, 0.25);
-            }
-
-            /* Button */
-            .btn-custom {
-              background: var(--gold);
-              color: var(--white);
-              border: none;
-              padding: 12px 25px;
-              border-radius: var(--radius);
-              font-weight: 500;
-              transition: var(--transition);
-              font-size: 14px;
-            }
-
-            .btn-custom:hover {
-              background: var(--gold-dark);
-            }
-
-            .inquiry-card input,
-            .inquiry-card select,
-            .inquiry-card textarea {
-              font-size: 14px;
-            }
-
-            .inquiry-card input::placeholder,
-            .inquiry-card textarea::placeholder,
-            .inquiry-card select::placeholder {
-              font-size: 14px;
-            }
-          </style>
-          <div class="inquiry-card">
-
-            <!-- Title -->
-            <div class="inquiry-title text-center">
-              <h3 class="text-white">Send Your Inquiry</h2>
-
-                <p>Fill out the form and our team will get back to you shortly</p>
+                  <li><a href="contact.html"> Contact</a></li>
+                </ul>
+              </div>
             </div>
 
-            <!-- Form -->
+            <div class="col-lg-2 contact-left d-flex justify-content-center">
+              <div>
+
+                <h5 class="pb-3"> Our Courses</h5>
+                <ul class="ft-our-courses list-unstyled">
+                  <li><a href="courses.html" class=""> EC-Council</a></li>
+                  <li><a href="courses.html" class=""> ISACA</a></li>
+                  <li><a href="courses.html" class=""> CompTIA</a></li>
+                  <li><a href="courses.html" class=""> PMI</a></li>
+                  <li><a href="courses.html" class=""> Offsec</a></li>
+                  <!-- <li><a href="courses.html" class=""> AWS</a></li>
+                  <li><a href="courses.html" class=""> Microsoft</a></li>
+                  <li><a href="courses.html" class=""> Palo Alto</a></li> -->
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4 contact-left d-flex justify-content-center">
+              <div>
+
+                <!-- <div>
+                  <img src="images/logo3.png" alt="Silver Edge IT Solutions" class="" style="width: 150px;">
+                </div> -->
+                <!-- <p class="pe-md-5">
+                  We provide high-quality IT certifications, training, and cybersecurity solutions
+                  to help you grow your career and business.
+                </p> -->
+                <h5 class="pb-3">Contact Us</h5>
+                <div class="contact-item">
+
+
+                  <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                  <div class="contact-info">
+                    <span>Tel</span>
+                    <strong>+91 XXXXX XXXXX </strong>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                  <div class="contact-info">
+                    <span>Email</span>
+                    <strong>info@silveredge.com</strong>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="contact-info">
+                    <span>Address</span>
+                    <strong>123, abc, XYZ, Uttar Pradesh, India</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer -->
+          <div class="contact-footer">
+            <!-- <div>
+              <a href="index.html"> Home</a> &nbsp; | &nbsp;
+              <a href="about.html"> About Us</a>
+              &nbsp; | &nbsp; <a href="courses.html"> Courses</a>
+              &nbsp; | &nbsp; <a href="contact.html"> Contact</a>
+            </div> -->
+            <div class="d-flex justify-content-center">
+              <div>
+
+                © Silver Edge IT Solutions. All rights reserved.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <footer class="footer position-relative">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5 col-md-6"> 
+          <div class="inquiry-card"> 
+            <div class="inquiry-title text-center">
+              <h3 class="">Get In Touch</h3> 
+            </div> 
             <form>
               <div class="row g-3">
 
-                <div class="col-md-6">
+                <div class="col-12">
                   <input type="text" class="form-control" placeholder="Full Name" required>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-12">
                   <input type="email" class="form-control" placeholder="Email Address" required>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-12">
                   <input type="tel" class="form-control" placeholder="Phone Number" required>
                 </div>
 
-                <div class="col-md-6">
-                  <select class="form-select" required>
-                    <option selected disabled>Select Course</option>
-                    <option>CISSP</option>
-                    <option>CEH</option>
-                    <option>AWS</option>
-                    <option>Azure</option>
-                  </select>
-                </div>
 
                 <div class="col-12">
                   <textarea class="form-control" rows="2" placeholder="Your Message"></textarea>
@@ -1487,33 +1662,28 @@
                 </div>
 
               </div>
-            </form>
-
-          </div>
-
+            </form> 
+          </div> 
         </div>
         <div class="col-lg-2 col-md-6">
           <h5>Quick Links</h5>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> Solutions</a></li>
-            <!-- <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li> -->
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="about.html"> About Us</a></li>
+            <li><a href="courses.html"> Courses</a></li>
+            <li><a href="solutions.html"> Solutions</a></li>
+
+            <li><a href="contact.html"> Contact</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-6">
           <h5>Our Courses</h5>
           <ul class="footer-links">
-            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> EC-Council</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> ISACA</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> CompTIA</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> PMI</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> Offsec</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> AWS</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> Microsoft</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> Palo Alto</a></li>
+            <li><a href="courses.html"> EC-Council</a></li>
+            <li><a href="solutions.html"> ISACA</a></li>
+            <li><a href="solutions.html"> CompTIA</a></li>
+            <li><a href="solutions.html"> PMI</a></li>
+            <li><a href="solutions.html"> Offsec</a></li> 
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -1535,10 +1705,12 @@
         </div>
       </div>
       <div class="footer-bottom text-center">
-        <p>&copy; 2026 Silver Edge IT Solutions. <i class="fas fa-heart text-gold"></i></p>
+        <p>&copy; 2026 Silver Edge IT Solutions.</p>
       </div>
     </div>
-  </footer>
+  </footer> -->
+
+
 
   <!-- ========== FLOATING BUTTONS ========== -->
   <div class="floating-buttons">
@@ -1599,6 +1771,62 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const headerWrapper = document.getElementById("headerWrapper");
+      const navbar = document.getElementById("mainNavbar2");
+      const logo = navbar.querySelector(".nav-logo");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          headerWrapper.classList.add("navbar-scrolled");
+          navbar.classList.remove("pt-lg-4");
+          navbar.classList.add("py-2");
+          // Switch logo to the dark version if available
+          logo.src = "images/logo3.png";
+        } else {
+          headerWrapper.classList.remove("navbar-scrolled");
+          navbar.classList.remove("py-2");
+          navbar.classList.add("pt-lg-4");
+          // Switch back to light logo
+          logo.src = "images/logo.png";
+        }
+      });
+
+      // Mobile dropdown toggle script
+      const dropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const dropdown = this.closest(".custom-dropdown").querySelector(".drop-down-links");
+          dropdown.classList.toggle("show");
+
+          // Optional visually flip chevron icon
+          if (dropdown.classList.contains("show")) {
+            this.classList.remove("fa-chevron-down");
+            this.classList.add("fa-chevron-up");
+          } else {
+            this.classList.remove("fa-chevron-up");
+            this.classList.add("fa-chevron-down");
+          }
+        });
+      });
+    });
+
+    //     document.getElementById("footer-2").innerHTML = `
+    // <section class="contact-section">
+
+    // </section>
+    //   `;
+
+
+
+    document.getElementById("Footer-1").innerHTML = `
+
+    `;
+  </script>
+
 </body>
 
 </html>
+</script>

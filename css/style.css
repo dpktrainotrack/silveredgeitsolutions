@@ -336,7 +336,7 @@ img {
 
 .btn-primary-custom:hover {
   color: var(--white);
-  transform: translateY(-3px);
+  /* transform: translateY(-3px); */
   box-shadow: var(--shadow-hover);
 }
 
@@ -535,7 +535,7 @@ img {
   right: -10px;
   background: linear-gradient(135deg, var(--gold), var(--gold-dark));
   color: var(--white);
-  padding: 20px 30px;
+  padding: 16px 20px;
   border-radius: var(--radius);
   text-align: center;
   box-shadow: var(--shadow-gold);
@@ -1405,15 +1405,15 @@ img {
 .contact-form {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 40px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-color);
+  padding: 15px 25px 25px;
+  /* box-shadow: var(--shadow);
+  border: 1px solid var(--border-color); */
 }
 
 .contact-form .form-control {
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-color);
-  padding: 14px 18px;
+  padding: 10px 18px;
   font-size: 0.95rem;
   transition: var(--transition);
 }
@@ -1424,7 +1424,7 @@ img {
 }
 
 .contact-form textarea.form-control {
-  min-height: 140px;
+  /* min-height: 140px; */
   resize: vertical;
 }
 

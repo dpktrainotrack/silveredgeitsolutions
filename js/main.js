@@ -200,7 +200,7 @@ $(document).ready(function () {
   $(".placement-carousel").owlCarousel({
     loop: true,
     margin: 20,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 2500,
     autoplayHoverPause: true,
     smartSpeed: 700,
@@ -223,7 +223,7 @@ $(document).ready(function () {
   $(".testimonial-carousel").owlCarousel({
     loop: true,
     margin: 20,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
     smartSpeed: 700,
