@@ -232,7 +232,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
 
   <!-- ========== TOP HEADER BAR ========== -->
   <!-- <div class="top-header d-none d-md-block">
@@ -463,6 +463,21 @@
           color: var(--primary) !important;
         }
 
+        /* Mobile navbar background when scrolled */
+        .navbar-scrolled #mainNavbar2 {
+          background-color: var(--white) !important;
+        }
+
+        /* Mobile nav links when scrolled */
+        .navbar-scrolled #mainNavbar2 .nav-link {
+          color: var(--text-dark) !important;
+        }
+
+        .navbar-scrolled #mainNavbar2 .nav-link:hover,
+        .navbar-scrolled #mainNavbar2 .nav-link.active {
+          color: var(--primary) !important;
+        }
+
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -484,12 +499,11 @@
               <img src="images/logo.png" alt="" class="nav-logo" style="transition: all 0.3s ease-in-out;">
             </div>
           </a>
-          <button class="navbar-toggler bg-transparent border-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#mainNav">
+          <button class="navbar-toggler  border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <i class="fa-solid fa-bars fs-2"></i>
           </button>
           <div class="collapse navbar-collapse justify-sm-start justify-content-center" id="mainNav">
-            <ul class="navbar-nav align-items-lg-center">
+            <ul class="navbar-nav align-items-lg-center align-items-start ">
               <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
               <li
@@ -508,8 +522,7 @@
                   <li><a href="courses.html"> Palo Alto</a></li>
                 </ul>
               </li>
-              <!-- <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li> -->
-              <!-- <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li> -->
+
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -633,10 +646,10 @@
           <div class="about-img-wrapper">
             <img src="images/home-intro.png" alt="About Silver Edge" class="img-fluid rounded-4">
           </div>
-          <div class="experience-badge" data-aos="zoom-in" data-aos-delay="300">
+          <!-- <div class="experience-badge" data-aos="zoom-in" data-aos-delay="300">
             <h3>20+</h3>
             <p>Years of Experience</p>
-          </div>
+          </div> -->
         </div>
         <div class="col-lg-7" data-aos="fade-left">
           <!-- <h6 class="text-gold fw-semibold text-uppercase mb-2"><i class="fas fa-shield-halved me-2"></i>Who We Are</h6> -->
@@ -659,7 +672,7 @@
   </section>
 
   <!-- ========== Trending-Certifications ========== -->
-  <section class="section-padding" id="industries">
+  <section class="section-padding position-relative" id="industries">
     <div class="container">
       <div class="section-header mb-4" data-aos="fade-up">
         <!-- <h6 class="text-gold fw-semibold text-uppercase"><i class="fas fa-building me-2"></i> Courses
@@ -670,12 +683,13 @@
       <div class="row g-2">
         <div class="col-md-6 col-12 " data-aos="fade-up" data-aos-delay="0">
           <div class="industry-card">
-            <div class="industry-icon p-2"><img src="images/course-category/cyber 1.png" alt=""></div>
+            <div class="industry-icon p-2"><img src="images/course-category/pmi.png" alt=""></div>
 
             <div class="text-start">
-              <h5>Certified CEH v13 AI</h5>
+              <h5>Project Management Professional (PMP)</h5>
               <div>
-                <div class="light-text">Certified Ethical Hacker (CEH) is a globally recognized
+                <div class="light-text">Master Project Management Professional (PMP) with 48 hours of immersive,
+                  expert-led training
                 </div>
               </div>
             </div>
@@ -760,7 +774,7 @@
         <!-- EC-Council -->
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-user-shield"></i></div>
+            <div class="card-icon"> <img src="images/courses/ec-councll.png" alt="ec-council"></div>
             <h4>EC-Council</h4>
             <p>CEH, CPENT, CCSE, CHFI & more ethical hacking certifications.</p>
             <a href="courses.html" class="btn-outline-primary btn-sm">Read More</a>
@@ -787,7 +801,7 @@
         <!-- Offsec -->
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-bug"></i></div>
+            <div class="card-icon"> <img src="images/courses/Offsec.png" alt="offsec"></div>
             <h4>Offsec</h4>
             <p>OSCP, OSWA, OSTH advanced penetration testing courses.</p>
             <a href="courses.html" class="btn-outline-primary btn-sm">Read More</a>
@@ -832,7 +846,7 @@
         <!-- Google -->
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fab fa-google"></i></div>
+            <div class="card-icon"> <img src="images/courses/google.png" alt="google"></div>
             <h4>Google</h4>
             <p>Google Cloud, cybersecurity professional certificates.</p>
             <a href="courses.html" class="btn-outline-primary btn-sm">Read More</a>
@@ -841,7 +855,7 @@
         <!-- Oracle -->
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-database"></i></div>
+            <div class="card-icon"> <img src="images/courses/oracle.png" alt="oracle"></div>
             <h4>Oracle</h4>
             <p>Oracle Cloud Infrastructure & database security certifications.</p>
             <a href="courses.html" class="btn-outline-primary btn-sm">Read More</a>
@@ -850,7 +864,7 @@
         <!-- Splunk -->
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="50">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="card-icon"> <img src="images/courses/splunk.png" alt="splunk"></div>
             <h4>Splunk</h4>
             <p>SIEM, data analytics & security operations certifications.</p>
             <a href="courses.html" class="btn-outline-primary btn-sm">Read More</a>
@@ -859,7 +873,7 @@
         <!-- VMware -->
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-server"></i></div>
+            <div class="card-icon"> <img src="images/courses/vmware.png" alt="vmware"></div>
             <h4>VMware</h4>
             <p>Virtualization, cloud management & data center certifications.</p>
             <a href="courses.html" class="btn-outline-primary btn-sm">Read More</a>
@@ -868,7 +882,7 @@
         <!-- ISC² -->
         <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
           <div class="course-card glow-on-hover">
-            <div class="card-icon"><i class="fas fa-lock"></i></div>
+            <div class="card-icon"> <img src="images/courses/isc2.png" alt="isc2"></div>
             <h4>ISC²</h4>
             <p>CISSP, CCSP & SSCP global security professional certifications.</p>
             <a href="courses.html" class="btn-outline-primary btn-sm">Read More</a>
@@ -883,7 +897,7 @@
   <section class="section-padding position-relative" id="why-us">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center mb-4">
+        <div class="col-12 text-center ">
           <!-- <h6 class="text-gold fw-semibold text-uppercase mb-2"><i class="fas fa-star me-2"></i>Why Choose Us</h6> -->
           <div class="section-header aos-init aos-animate">
             <h2>Why Choose <span class="text-gold">Us</span></h2>
@@ -891,75 +905,80 @@
               industry certifications.</p>
           </div>
         </div>
+      </div>
 
-        <div class="row align-items-center g-5">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="images/why-choose-us.png  " alt="Why Choose Us" class="img-fluid rounded-4 mt-3"
-              style="max-height: 300px;">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-4" data-aos="fade-right">
+          <div class="w-full">
+
+            <img src="images/why-choose-us.png  " alt="Why Choose Us" class="img-fluid rounded-4">
           </div>
-          <div class="col-lg-8" data-aos="fade-left">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="why-choose-item">
-                  <div class="icon-box"><i class="fas fa-certificate"></i></div>
-                  <div>
-                    <h5>Certified Experts</h5>
-                    <p>Industry-certified cyber security professionals.</p>
-                  </div>
+        </div>
+        <div class="col-lg-8" data-aos="fade-left">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="why-choose-item">
+                <div class="icon-box"><i class="fas fa-certificate"></i></div>
+                <div>
+                  <h5>Certified Experts</h5>
+                  <p>Industry-certified cyber security professionals.</p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="why-choose-item">
-                  <div class="icon-box"><i class="fas fa-eye"></i></div>
-                  <div>
-                    <h5>24/7 Monitoring</h5>
-                    <p>Round-the-clock threat monitoring & alerts.</p>
-                  </div>
+            </div>
+            <div class="col-md-6">
+              <div class="why-choose-item">
+                <div class="icon-box"><i class="fas fa-eye"></i></div>
+                <div>
+                  <h5>24/7 Monitoring</h5>
+                  <p>Round-the-clock threat monitoring & alerts.</p>
                 </div>
               </div>
+            </div>
 
-              <div class="col-md-6">
-                <div class="why-choose-item">
-                  <div class="icon-box"><i class="fas fa-sliders"></i></div>
-                  <div>
-                    <h5>Custom Solutions</h5>
-                    <p>Tailored security for your business needs.</p>
-                  </div>
+            <div class="col-md-6">
+              <div class="why-choose-item">
+                <div class="icon-box"><i class="fas fa-sliders"></i></div>
+                <div>
+                  <h5>Custom Solutions</h5>
+                  <p>Tailored security for your business needs.</p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="why-choose-item">
-                  <div class="icon-box"><i class="fas fa-hand-holding-dollar"></i></div>
-                  <div>
-                    <h5>Affordable & Scalable</h5>
-                    <p>Cost-effective solutions that grow with you.</p>
-                  </div>
+            </div>
+            <div class="col-md-6">
+              <div class="why-choose-item">
+                <div class="icon-box"><i class="fas fa-hand-holding-dollar"></i></div>
+                <div>
+                  <h5>Affordable & Scalable</h5>
+                  <p>Cost-effective solutions that grow with you.</p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="why-choose-item">
-                  <div class="icon-box"><i class="fas fa-bolt"></i></div>
-                  <div>
-                    <h5>Fast Response</h5>
-                    <p>Rapid incident response & recovery.</p>
-                  </div>
+            </div>
+            <div class="col-md-6">
+              <div class="why-choose-item">
+                <div class="icon-box"><i class="fas fa-bolt"></i></div>
+                <div>
+                  <h5>Fast Response</h5>
+                  <p>Rapid incident response & recovery.</p>
                 </div>
               </div>
+            </div>
 
-              <div class="col-md-6">
-                <div class="why-choose-item">
-                  <div class="icon-box"><i class="fas fa-crosshairs"></i></div>
-                  <div>
-                    <h5>Advanced Detection</h5>
-                    <p>AI-driven threat detection systems.</p>
-                  </div>
+            <div class="col-md-6">
+              <div class="why-choose-item">
+                <div class="icon-box"><i class="fas fa-crosshairs"></i></div>
+                <div>
+                  <h5>Advanced Detection</h5>
+                  <p>AI-driven threat detection systems.</p>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
+    </div>
   </section>
+
 
   <!-- ========== OUR Placements ========== -->
   <section class=" placement-section section-bg section-padding position-relative" id="placements">
@@ -1494,8 +1513,6 @@
     </div>
   </section>
 
-
-
   <!-- ========== CTA SECTION ========== -->
   <!-- <section class="section-padding cta-section text-center position-relative" id="cta">
     <div class="container position-relative" style="z-index: 2;">
@@ -1715,7 +1732,7 @@
 
 
   <!-- ========== FLOATING BUTTONS ========== -->
-  <div class="floating-buttons">
+  <!-- <div class="floating-buttons">
     <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
@@ -1723,7 +1740,7 @@
 
   <button class="back-to-top" title="Back to Top">
     <i class="fas fa-arrow-up"></i>
-  </button>
+  </button> -->
 
   <!-- ========== CONSULTATION MODAL ========== -->
   <div class="modal fade" id="consultationModal" tabindex="-1">
@@ -1780,7 +1797,7 @@
       const logo = navbar.querySelector(".nav-logo");
 
       window.addEventListener("scroll", function () {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 1) {
           headerWrapper.classList.add("navbar-scrolled");
           navbar.classList.remove("pt-lg-4");
           navbar.classList.add("py-2");
@@ -1815,17 +1832,7 @@
       });
     });
 
-    //     document.getElementById("footer-2").innerHTML = `
-    // <section class="contact-section">
 
-    // </section>
-    //   `;
-
-
-
-    document.getElementById("Footer-1").innerHTML = `
-
-    `;
   </script>
 
 </body>

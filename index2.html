@@ -228,6 +228,169 @@
       padding-bottom: 10px;
     }
   </style>
+
+  <!-- ===navbar-2-css==== -->
+
+  <style>
+    .header-wrapper-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-scrolled {
+      background-color: var(--white) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Links default state (Transparent Background) */
+    #mainNavbar2 .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      transition: color 0.3s ease-in-out;
+    }
+
+    #mainNavbar2 .nav-link:hover,
+    #mainNavbar2 .nav-link.active {
+      color: #fff !important;
+    }
+
+    /* Links scrolled state (White Background) */
+    .navbar-scrolled #mainNavbar2 .nav-link {
+      color: var(--text-dark) !important;
+    }
+
+    .navbar-scrolled #mainNavbar2 .nav-link:hover,
+    .navbar-scrolled #mainNavbar2 .nav-link.active {
+      color: var(--primary) !important;
+    }
+
+    /* Keep phone button white */
+    .navbar-scrolled #mainNavbar2 .btn-nav-cta.text-white {
+      color: #fff !important;
+    }
+
+    /* Toggler button icon color */
+    .navbar-scrolled .navbar-toggler i {
+      color: var(--text-dark) !important;
+    }
+
+    .navbar-toggler i {
+      color: var(--white);
+      transition: color 0.3s ease-in-out;
+    }
+
+    .light-text {
+      color: rgb(173, 173, 173);
+      font-size: 12px;
+    }
+
+    /* Responsive Dropdown Styles */
+    .custom-dropdown {
+      position: relative;
+    }
+
+    .drop-down-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--white);
+      min-width: 230px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      list-style: none;
+      margin: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: all 0.3s ease;
+      z-index: 1060;
+    }
+
+    .drop-down-links li a {
+      display: block;
+      padding: 10px 25px;
+      color: var(--text-dark) !important;
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .drop-down-links li a i {
+      color: var(--gold);
+      margin-right: 10px;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .drop-down-links li a:hover {
+      color: var(--primary) !important;
+      padding-left: 30px;
+      background: rgba(47, 148, 219, 0.05);
+      /* very light gold/blue highlight */
+    }
+
+    /* Desktop Hover */
+    @media (min-width: 992px) {
+      .custom-dropdown:hover .drop-down-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile Accordion Style */
+    @media (max-width: 991px) {
+      .drop-down-links {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        /* Hidden on mobile by default */
+        padding: 5px 0 5px 15px;
+      }
+
+      .drop-down-links.show {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .drop-down-links li a {
+        color: rgba(255, 255, 255, 0.8) !important;
+        padding: 8px 15px;
+      }
+
+      .drop-down-links li a:hover {
+        color: var(--white) !important;
+        padding-left: 20px;
+      }
+
+      .navbar-scrolled .drop-down-links li a {
+        color: var(--text-dark) !important;
+      }
+
+      .navbar-scrolled .drop-down-links li a:hover {
+        color: var(--primary) !important;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  </style>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -314,167 +477,6 @@
     <div class="position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.7); top: 0; left: 0; z-index: 1;">
     </div>
     <!-- ========== NAVBAR-2 ========== -->
-    <style>
-      .header-wrapper-section {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1050;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .navbar-scrolled {
-        background-color: var(--white) !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Links default state (Transparent Background) */
-      #mainNavbar2 .nav-link {
-        color: rgba(255, 255, 255, 0.9) !important;
-        transition: color 0.3s ease-in-out;
-      }
-
-      #mainNavbar2 .nav-link:hover,
-      #mainNavbar2 .nav-link.active {
-        color: #fff !important;
-      }
-
-      /* Links scrolled state (White Background) */
-      .navbar-scrolled #mainNavbar2 .nav-link {
-        color: var(--text-dark) !important;
-      }
-
-      .navbar-scrolled #mainNavbar2 .nav-link:hover,
-      .navbar-scrolled #mainNavbar2 .nav-link.active {
-        color: var(--primary) !important;
-      }
-
-      /* Keep phone button white */
-      .navbar-scrolled #mainNavbar2 .btn-nav-cta.text-white {
-        color: #fff !important;
-      }
-
-      /* Toggler button icon color */
-      .navbar-scrolled .navbar-toggler i {
-        color: var(--text-dark) !important;
-      }
-
-      .navbar-toggler i {
-        color: var(--white);
-        transition: color 0.3s ease-in-out;
-      }
-
-      .light-text {
-        color: rgb(173, 173, 173);
-        font-size: 12px;
-      }
-
-      /* Responsive Dropdown Styles */
-      .custom-dropdown {
-        position: relative;
-      }
-
-      .drop-down-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: var(--white);
-        min-width: 230px;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
-        list-style: none;
-        margin: 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(15px);
-        transition: all 0.3s ease;
-        z-index: 1060;
-      }
-
-      .drop-down-links li a {
-        display: block;
-        padding: 10px 25px;
-        color: var(--text-dark) !important;
-        font-weight: 500;
-        font-size: 15px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .drop-down-links li a i {
-        color: var(--gold);
-        margin-right: 10px;
-        font-size: 12px;
-        transition: all 0.3s ease;
-      }
-
-      .drop-down-links li a:hover {
-        color: var(--primary) !important;
-        padding-left: 30px;
-        background: rgba(47, 148, 219, 0.05);
-        /* very light gold/blue highlight */
-      }
-
-      /* Desktop Hover */
-      @media (min-width: 992px) {
-        .custom-dropdown:hover .drop-down-links {
-          opacity: 1;
-          visibility: visible;
-          transform: translateY(0);
-        }
-      }
-
-      /* Mobile Accordion Style */
-      @media (max-width: 991px) {
-        .drop-down-links {
-          position: static;
-          box-shadow: none;
-          background: transparent;
-          opacity: 1;
-          visibility: visible;
-          transform: none;
-          display: none;
-          /* Hidden on mobile by default */
-          padding: 5px 0 5px 15px;
-        }
-
-        .drop-down-links.show {
-          display: block;
-          animation: fadeIn 0.3s ease;
-        }
-
-        .drop-down-links li a {
-          color: rgba(255, 255, 255, 0.8) !important;
-          padding: 8px 15px;
-        }
-
-        .drop-down-links li a:hover {
-          color: var(--white) !important;
-          padding-left: 20px;
-        }
-
-        .navbar-scrolled .drop-down-links li a {
-          color: var(--text-dark) !important;
-        }
-
-        .navbar-scrolled .drop-down-links li a:hover {
-          color: var(--primary) !important;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-
-          to {
-            opacity: 1;
-          }
-        }
-      }
-    </style>
-
     <div class="header-wrapper-section" id="headerWrapper">
       <nav class="navbar navbar-expand-lg pt-lg-4" id="mainNavbar2"
         style="background: transparent; transition: all 0.3s ease-in-out;">
@@ -521,9 +523,6 @@
         </div>
       </nav>
     </div>
-
-
-
     <div class="container position-relative w-100" style="z-index: 2;">
       <div class="hero-content mx-auto " style="padding-top: 140px;">
         <h1>Advanced <span>Cyber Security</span> Solutions for Modern Businesses</h1>
@@ -631,7 +630,7 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-5" data-aos="fade-right">
           <div class="about-img-wrapper">
-            <img src="images/home-intro.png" alt="About Silver Edge" class="img-fluid rounded-4">
+            <img src="images/home/home-intro.png" alt="About Silver Edge" class="img-fluid rounded-4">
           </div>
           <div class="experience-badge" data-aos="zoom-in" data-aos-delay="300">
             <h3>20+</h3>
@@ -1420,7 +1419,7 @@
       <div class="row">
         <div class="col-lg-5">
           <div class="rounded-3 overflow-hidden">
-            <img src="images/home/faq.jpg" alt="" class="img-fluid">
+            <img src="images/home/faq2.png" alt="" class="img-fluid">
           </div>
         </div>
         <div class="col-lg-7">
