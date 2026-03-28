@@ -1,0 +1,91 @@
+  .inquiry-card {
+      /* background: var(--white); */
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      /* padding: 40px; */
+      transition: var(--transition);
+      background-color: #21344e;
+  }
+
+  .inquiry-card {
+      padding: 26px;
+      /* background-color: #132a528a */
+  }
+
+  .inquiry-card:hover {
+      box-shadow: var(--shadow-hover);
+  }
+
+  /* Title */
+  .inquiry-title {
+      margin-bottom: 25px;
+  }
+
+  .inquiry-title h2 {
+      color: var(--primary);
+      font-weight: 700;
+  }
+
+  .inquiry-title p {
+      color: var(--text-muted);
+  }
+
+  /* Form Controls */
+  .form-control,
+  .form-select {
+      border-radius: 6px;
+      /* border: 1px solid var(--border-color); */
+      padding: 6px 8px;
+      transition: var(--transition);
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 0.15rem rgba(47, 148, 219, 0.25);
+  }
+
+  .inquiry-card input:focus,
+  .inquiry-card select:focus,
+  .inquiry-card textarea:focus {
+      background-color: #21344e;
+      color: white;
+
+  }
+
+  /* Button */
+  .btn-custom {
+      background: var(--gold);
+      color: var(--white);
+      border: none;
+      padding: 12px 25px;
+      border-radius: var(--radius);
+      font-weight: 500;
+      transition: var(--transition);
+      font-size: 14px;
+  }
+
+  .btn-custom:hover {
+      background: var(--gold-dark);
+  }
+
+  .inquiry-card input,
+  .inquiry-card select,
+  .inquiry-card textarea {
+      font-size: 14px;
+      background-color: #21344e;
+      color: white;
+      border: 1px solid #61656b;
+  }
+
+  .inquiry-card input::placeholder,
+  .inquiry-card textarea::placeholder,
+  .inquiry-card select::placeholder {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.452);
+  }
+
+  .inquiry-title h3 {
+      color: white;
+      font-weight: 700;
+  }

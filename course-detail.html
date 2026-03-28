@@ -28,6 +28,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="css/style.css">
 
+
   <style>
     /* ======= NAVBAR SCROLLED OVERRIDES ======= */
     .header-wrapper-section {
@@ -382,7 +383,7 @@
     }
 
     .exam-card-header.practical {
-      background: linear-gradient(135deg, #8b2252, var(--gold));
+      background: linear-gradient(135deg, #8b2252, #001f36);
     }
 
     .exam-card-icon {
@@ -624,7 +625,6 @@
       </div>
     </nav>
   </div>
-
   <!-- ===== PAGE HEADER ===== -->
   <section class="page-header-cd">
     <div class="container position-relative" style="z-index:2;">
@@ -637,15 +637,14 @@
               <li class="breadcrumb-item active">CEH v13 AI</li>
             </ol>
           </nav>
-          <h1 class="mt-2">Certified Ethical Hacker <span style="color: var(--gold);">v13 AI</span></h1>
-          <p class="text-white-50 mt-2 mb-0" style="font-size:1.05rem;">
-            World's #1 Ethical Hacking Certification — EC-Council
+          <!-- <h1 class="mt-2">Certified Ethical Hacker <span style="color: var(--gold);">v13 AI</span></h1> -->
+          <p class="text-white mt-2 mb-0" style="font-size:2rem;">
+            CEH v13 AI
           </p>
         </div>
       </div>
     </div>
   </section>
-
   <!-- ====================================================
        SECTION 1 — COURSE INTRO
   ===================================================== -->
@@ -698,8 +697,8 @@
         <!-- RIGHT: Image -->
         <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
           <div class="course-img-card">
-            <img src="https://img.freepik.com/free-photo/hacker-using-computer-dark-room_23-2150918884.jpg"
-              alt="CEH v13 AI Ethical Hacking Course" style="height: 420px; object-fit: cover;">
+            <img src="images/courses/img1.avif  " alt="CEH v13 AI Ethical Hacking Course"
+              style="height: 420px; object-fit: cover;">
             <div class="course-img-overlay"></div>
             <div class="course-img-badge">
               <div class="badge-icon">
@@ -782,7 +781,7 @@
         <!-- Practical Exam Card -->
         <div class="exam-card" data-aos="fade-up" data-aos-delay="100">
           <div class="exam-card-header practical">
-            <div class="exam-card-icon"><i class="fas fa-terminal"></i></div>
+            <div class="exam-card-icon"><i class="fas fa-shield-halved"></i></div>
             <div>
               <h4>CEH v13 — Practical Exam</h4>
               <p>Hands-on Cyber Range Test</p>
@@ -1051,76 +1050,91 @@
       </div>
     </div>
   </section>
-  <!-- ====================================================
-       CTA
-  ===================================================== -->
-  <section class="section-padding cta-section text-center">
-    <div class="container position-relative" style="z-index:2;">
-      <div data-aos="zoom-in">
-        <h2>Ready to Become a Certified Ethical Hacker?</h2>
-        <p>Enroll today and start your cybersecurity career with a world-class certification.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <a href="contact.html" class="btn btn-gold btn-lg">
-            <i class="fas fa-graduation-cap me-2"></i>Enroll Now
-          </a>
-          <a href="#" class="btn btn-outline-light btn-lg" download>
-            <i class="fas fa-download me-2"></i>Download Brochure
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ====================================================
        FOOTER
   ===================================================== -->
-  <footer class="footer">
+  <footer class="footer position-relative">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-4 col-md-6">
-          <h5>Silver Edge IT Solutions</h5>
-          <p>A leading cyber security company providing advanced security solutions, training, and certifications.</p>
-          <div class="footer-social mt-3">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="col-lg-5 col-md-6">
+          <div class="inquiry-card">
+            <div class="inquiry-title text-center">
+              <h3 class="">Get In Touch</h3>
+            </div>
+            <form>
+              <div class="row g-3">
+
+                <div class="col-12">
+                  <input type="text" class="form-control" placeholder="Full Name" required>
+                </div>
+
+                <div class="col-12">
+                  <input type="email" class="form-control" placeholder="Email Address" required>
+                </div>
+
+                <div class="col-12">
+                  <input type="tel" class="form-control" placeholder="Phone Number" required>
+                </div>
+
+
+                <div class="col-12">
+                  <textarea class="form-control" rows="2" placeholder="Your Message"></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-custom">
+                    Submit Inquiry
+                  </button>
+                </div>
+
+              </div>
+            </form>
           </div>
         </div>
         <div class="col-lg-2 col-md-6">
           <h5>Quick Links</h5>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
-            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Courses</a></li>
-            <li><a href="solutions.html"><i class="fas fa-chevron-right"></i> Solutions</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="about.html"> About Us</a></li>
+            <li><a href="courses.html"> Courses</a></li>
+            <li><a href="contact.html"> Contact</a></li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-2 col-md-6">
           <h5>Our Courses</h5>
           <ul class="footer-links">
-            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> EC-Council CEH</a></li>
-            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> CompTIA Security+</a></li>
-            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> ISACA CISM</a></li>
-            <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Offsec OSCP</a></li>
+            <li><a href="courses.html"> EC-Council</a></li>
+            <li><a href="solutions.html"> ISACA</a></li>
+            <li><a href="solutions.html"> CompTIA</a></li>
+            <li><a href="solutions.html"> PMI</a></li>
+            <li><a href="solutions.html"> Offsec</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
           <h5>Contact Info</h5>
           <ul class="footer-contact list-unstyled">
-            <li><i class="fas fa-map-marker-alt"></i> <span>123, Cyber Tower, Sector 62, Noida, India</span></li>
+            <li><i class="fas fa-map-marker-alt"></i> <span>123, abc, XYZ, Uttar Pradesh,
+                India</span></li>
             <li><i class="fas fa-phone"></i> <span>+91 98765 43210</span></li>
             <li><i class="fas fa-envelope"></i> <span>info@silveredgeitsolutions.com</span></li>
+            <li><i class="fas fa-clock"></i> <span>Mon - Sat: 9:00 AM - 6:00 PM</span></li>
           </ul>
+          <div>
+            <div class="footer-social mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer-bottom text-center">
-        <p>&copy; 2026 Silver Edge IT Solutions. All Rights Reserved.</p>
+        <p>&copy; 2026 Silver Edge IT Solutions.</p>
       </div>
     </div>
   </footer>
-
   <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
   <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
