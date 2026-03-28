@@ -159,167 +159,175 @@
         text-align: start;
       }
     }
+
+    /* Wrapper */
+    .hero-search-form {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Main Box */
+    .hero-search-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 6px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    /* Hover Effect */
+    .hero-search-wrapper:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Input */
+    .hero-search-wrapper input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 14px 18px;
+      font-size: 15px;
+      border-radius: 50px;
+      background: transparent;
+      color: var(--text-dark);
+    }
+
+    /* Placeholder */
+    .hero-search-wrapper input::placeholder {
+      color: var(--text-muted);
+    }
+
+    /* Focus Effect */
+    .hero-search-wrapper:focus-within {
+      border: 1px solid var(--gold);
+      box-shadow: var(--shadow-gold);
+    }
+
+    /* Button */
+    .hero-search-wrapper button {
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-gold);
+    }
+
+    /* Button Hover */
+    .hero-search-wrapper button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    }
+
+    /* Icon */
+    .hero-search-wrapper i {
+      font-size: 16px;
+    }
+
+    .hero-content p {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ==========navbar-2-css========= */
+    .header-wrapper-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1050;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-scrolled {
+      background-color: var(--white) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Links default state (Transparent Background) */
+    #mainNavbar2 .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      transition: color 0.3s ease-in-out;
+    }
+
+    #mainNavbar2 .nav-link:hover,
+    #mainNavbar2 .nav-link.active {
+      color: #fff !important;
+    }
+
+    /* Links scrolled state (White Background) */
+    .navbar-scrolled #mainNavbar2 .nav-link {
+      color: var(--text-dark) !important;
+    }
+
+    .navbar-scrolled #mainNavbar2 .nav-link:hover,
+    .navbar-scrolled #mainNavbar2 .nav-link.active {
+      color: var(--primary) !important;
+    }
+
+    /* Keep phone button white */
+    .navbar-scrolled #mainNavbar2 .btn-nav-cta.text-white {
+      color: #fff !important;
+    }
+
+    /* Toggler button icon color */
+    .navbar-scrolled .navbar-toggler i {
+      color: var(--text-dark) !important;
+    }
+
+    .navbar-toggler i {
+      color: var(--white);
+      transition: color 0.3s ease-in-out;
+    }
+
+    .light-text {
+      color: rgb(173, 173, 173);
+      font-size: 12px;
+    }
+
+    /* Mobile navbar background when scrolled */
+    @media (max-width: 991.98px) {
+      .navbar-scrolled #mainNavbar2 {
+        background-color: var(--white) !important;
+      }
+
+      .navbar-scrolled #mainNavbar2 .nav-link,
+      .navbar-scrolled #mainNavbar2 .drop-down-links li a {
+        color: var(--text-dark) !important;
+      }
+
+      .navbar-scrolled #mainNavbar2 .nav-link:hover,
+      .navbar-scrolled #mainNavbar2 .nav-link.active,
+      .navbar-scrolled #mainNavbar2 .drop-down-links li a:hover {
+        color: var(--primary) !important;
+      }
+    }
   </style>
   <!-- Custom CSS -->
 </head>
 
 <body style="overflow-x: hidden;">
-
-  <!-- ========== TOP HEADER BAR ========== -->
-  <!-- <div class="top-header d-none d-md-block">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center gap-4 ">
-          <a href="mailto:info@silveredgeitsolutions.com"><i class="fas fa-envelope"></i>
-            info@silveredgeitsolutions.com</a>
-
-        </div>
-        <div>
-          <a href="tel:+919876543210"><i class="fas fa-phone"></i> +91 98765 43210</a>
-        </div> 
-      </div>
-    </div>
-  </div> -->
-
-  <!-- ========== NAVBAR ========== -->
-  <!-- <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <div class="brand-text">
-          <img src="images/logo.svg" alt="" class="">
-        </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="courses.html">Our Courses</a></li>
-          <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> 
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-
-  <!-- <li class="nav-item ms-lg-2">
-            <a class="nav-link btn-nav-cta text-white" href="#" data-bs-toggle="modal">
-              <i class="fas fa-shield-halved me-1"></i> Login
-            </a>
-          </li> -->
-
-  <!-- ========== HERO SECTION ========== -->
-  <!-- <div class="hero-particles"></div>  -->
-  <!-- <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6" data-aos="fade-right">
-          <div class="hero-content">
-            <h1>Advanced <span>Cyber Security</span> Solutions for Modern Businesses</h1>
-            <p>Protect your data, systems, and reputation with cutting-edge security services. Silver Edge IT Solutions
-              delivers enterprise-grade protection against evolving digital threats.</p>
-            <div class="hero-btns">
-              <a href="contact.html" class="btn btn-gold"><i class="fas fa-paper-plane me-2"></i>Enquiry Now</a>
-              <a href="courses.html" class="btn btn-outline-custom"><i class="fas fa-arrow-right me-2"></i>Explore
-                Courses</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="200">
-          <div class="hero-image">
-            <img src="images/img1.png" alt="Cyber Security Illustration" class="img-fluid" style="max-width: 280px;">
-          </div>
-        </div>
-      </div>
-    </div> -->
   <section class="hero-section position-relative overflow-hidden" id="hero" style="background: none;">
-    <!-- Video Background -->
     <video autoplay muted loop playsinline class="position-absolute w-100 h-100"
       style="object-fit: cover; top: 0; left: 0; z-index: 0;">
       <source src="images/video1.mp4" type="video/mp4">
     </video>
-
     <!-- Overlay -->
     <div class="position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.7); top: 0; left: 0; z-index: 1;">
     </div>
     <!-- ========== NAVBAR-2 ========== -->
-    <style>
-      .header-wrapper-section {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1050;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .navbar-scrolled {
-        background-color: var(--white) !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Links default state (Transparent Background) */
-      #mainNavbar2 .nav-link {
-        color: rgba(255, 255, 255, 0.9) !important;
-        transition: color 0.3s ease-in-out;
-      }
-
-      #mainNavbar2 .nav-link:hover,
-      #mainNavbar2 .nav-link.active {
-        color: #fff !important;
-      }
-
-      /* Links scrolled state (White Background) */
-      .navbar-scrolled #mainNavbar2 .nav-link {
-        color: var(--text-dark) !important;
-      }
-
-      .navbar-scrolled #mainNavbar2 .nav-link:hover,
-      .navbar-scrolled #mainNavbar2 .nav-link.active {
-        color: var(--primary) !important;
-      }
-
-      /* Keep phone button white */
-      .navbar-scrolled #mainNavbar2 .btn-nav-cta.text-white {
-        color: #fff !important;
-      }
-
-      /* Toggler button icon color */
-      .navbar-scrolled .navbar-toggler i {
-        color: var(--text-dark) !important;
-      }
-
-      .navbar-toggler i {
-        color: var(--white);
-        transition: color 0.3s ease-in-out;
-      }
-
-      .light-text {
-        color: rgb(173, 173, 173);
-        font-size: 12px;
-      }
-
-      /* Mobile navbar background when scrolled */
-      @media (max-width: 991.98px) {
-        .navbar-scrolled #mainNavbar2 {
-          background-color: var(--white) !important;
-        }
-
-        .navbar-scrolled #mainNavbar2 .nav-link,
-        .navbar-scrolled #mainNavbar2 .drop-down-links li a {
-          color: var(--text-dark) !important;
-        }
-
-        .navbar-scrolled #mainNavbar2 .nav-link:hover,
-        .navbar-scrolled #mainNavbar2 .nav-link.active,
-        .navbar-scrolled #mainNavbar2 .drop-down-links li a:hover {
-          color: var(--primary) !important;
-        }
-      }
-    </style>
-
     <div class="header-wrapper-section" id="headerWrapper">
       <nav class="navbar navbar-expand-lg pt-lg-4" id="mainNavbar2"
         style="background: transparent; transition: all 0.3s ease-in-out;">
@@ -364,89 +372,9 @@
         </div>
       </nav>
     </div>
-
-
-
-    <div class="container position-relative w-100" style="z-index: 2;">
-      <div class="hero-content mx-auto " style="padding-top: 140px;">
+    <div class="container position-relative w-100 hero-content-wrapper" style="z-index: 2;">
+      <div class="hero-content mx-auto ">
         <h1>Advanced <span>Cyber Security</span> Solutions for Modern Businesses</h1>
-        <style>
-          /* Wrapper */
-          .hero-search-form {
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
-          }
-
-          /* Main Box */
-          .hero-search-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            padding: 6px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-          }
-
-          /* Hover Effect */
-          .hero-search-wrapper:hover {
-            box-shadow: var(--shadow-hover);
-          }
-
-          /* Input */
-          .hero-search-wrapper input {
-            flex: 1;
-            border: none;
-            outline: none;
-            padding: 14px 18px;
-            font-size: 15px;
-            border-radius: 50px;
-            background: transparent;
-            color: var(--text-dark);
-          }
-
-          /* Placeholder */
-          .hero-search-wrapper input::placeholder {
-            color: var(--text-muted);
-          }
-
-          /* Focus Effect */
-          .hero-search-wrapper:focus-within {
-            border: 1px solid var(--gold);
-            box-shadow: var(--shadow-gold);
-          }
-
-          /* Button */
-          .hero-search-wrapper button {
-            width: 48px;
-            height: 48px;
-            border: none;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow-gold);
-          }
-
-          /* Button Hover */
-          .hero-search-wrapper button:hover {
-            transform: scale(1.05);
-            background: linear-gradient(135deg, var(--gold-light), var(--gold));
-          }
-
-          /* Icon */
-          .hero-search-wrapper i {
-            font-size: 16px;
-          }
-        </style>
         <form method="get" action="#" class="hero-search-form mt-4 mb-4" autocomplete="off" id="homeSearchForm">
           <div class="hero-search-wrapper">
             <input type="search" name="q" id="homeSearch" placeholder="Search certifications, courses..." required
@@ -458,7 +386,6 @@
         </form>
         <p>Protect your data, systems, and reputation with cutting-edge security services. Silver Edge IT Solutions
           delivers enterprise-grade protection against evolving digital threats.</p>
-
         <div class="hero-btns mt-4">
           <a href="contact.html" class="btn btn-gold"><i class="fas fa-paper-plane me-2"></i>Enquiry Now</a>
           <!-- <a href="courses.html" class="btn btn-outline-custom"><i class="fas fa-arrow-right me-2"></i>Explore
@@ -1160,7 +1087,7 @@
         </div>
       </div>
       <!-- Title -->
-      <div class="row">
+      <div class="row g-4">
         <div class="col-lg-5">
           <div class="rounded-3 overflow-hidden">
             <img src="images/home/faq.jpg" alt="" class="img-fluid">
