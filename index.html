@@ -1519,32 +1519,32 @@
         }
       });
 
-      // Mobile dropdown toggle script
+      function handleMobileView(e) {
+        if (e.matches) {
+          // Screen < 768px
+          headerWrapper.classList.add("navbar-scrolled");
+          navbar.classList.remove("pt-lg-4");
+          navbar.classList.add("py-2");
+          logo.src = "images/logo.png";
+        } else {
+          // Screen >= 768px (optional reset)
+          headerWrapper.classList.remove("navbar-scrolled");
+          navbar.classList.add("pt-lg-4");
+          navbar.classList.remove("py-2");
+          // logo.src = "images/logo-light.png"; // optional
+        }
+      }
 
+      const mediaQuery = window.matchMedia("(max-width: 767px)");
 
+      // Run on load
+      handleMobileView(mediaQuery);
 
-      // const dropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
-
-      // dropdownToggles.forEach(toggle => {
-      //   toggle.addEventListener("click", function (e) {
-      //     e.preventDefault();
-      //     const dropdown = this.closest(".custom-dropdown").querySelector(".drop-down-links");
-      //     dropdown.classList.toggle("show");
-
-      //     // Optional visually flip chevron icon
-      //     if (dropdown.classList.contains("show")) {
-      //       this.classList.remove("fa-chevron-down");
-      //       this.classList.add("fa-chevron-up");
-      //     } else {
-      //       this.classList.remove("fa-chevron-up");
-      //       this.classList.add("fa-chevron-down");
-      //     }
-      //   });
-      // });
-
-
+      // Run on screen resize
+      mediaQuery.addEventListener("change", handleMobileView);
     });
 
+    // Mobile dropdown toggle script 
 
     document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
       toggle.addEventListener("click", function () {
@@ -1557,6 +1557,8 @@
         this.classList.toggle("rotate");
       });
     });
+
+
 
 
   </script>
