@@ -28,9 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-
-
-
   window.addEventListener('scroll', handleScroll);
   handleScroll();
 
@@ -197,10 +194,21 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
+  toggle.addEventListener("click", function () {
+    const parent = this.closest(".custom-dropdown");
+    const dropdown = parent.querySelector(".drop-down-links");
+
+    dropdown.classList.toggle("show-dropownd-mobile");
+
+    // Optional: rotate icon
+    this.classList.toggle("rotate");
+  });
+});
 
 
 $(document).ready(function () {
-  
+
   $(".placement-carousel").owlCarousel({
     loop: true,
     margin: 20,
@@ -250,28 +258,28 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
-  $("#partnerOwlCarousel").owlCarousel({
-    loop: true,
-    margin: 20,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    smartSpeed: 3000,
-    nav: false,
-    dots: false,
-    navText: [
-      '<i class="fa-solid fa-chevron-left"></i>',
-      '<i class="fa-solid fa-chevron-right"></i>'
-    ],
-    responsive: {
-      0: { items: 2 },
-      600: { items: 3 },
-      1000: { items: 5 }
-    }
+  $(document).ready(function () {
+    $("#partnerOwlCarousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      smartSpeed: 3000,
+      nav: false,
+      dots: false,
+      navText: [
+        '<i class="fa-solid fa-chevron-left"></i>',
+        '<i class="fa-solid fa-chevron-right"></i>'
+      ],
+      responsive: {
+        0: { items: 2 },
+        600: { items: 3 },
+        1000: { items: 5 }
+      }
+    });
+
   });
-  
-});
 
   $(".studentReviews").owlCarousel({
     loop: true,
@@ -300,33 +308,46 @@ $(document).ready(function () {
 });
 
 
-      // const dropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
-      // dropdownToggles.forEach(toggle => {
-      //   toggle.addEventListener("click", function (e) {
-      //     e.preventDefault();
-      //     const dropdown = this.closest(".custom-dropdown").querySelector(".drop-down-links");
-      //     dropdown.classList.toggle("show");
+// const dropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
+// dropdownToggles.forEach(toggle => {
+//   toggle.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const dropdown = this.closest(".custom-dropdown").querySelector(".drop-down-links");
+//     dropdown.classList.toggle("show");
 
-      //     // Optional visually flip chevron icon
-      //     if (dropdown.classList.contains("show")) {
-      //       this.classList.remove("fa-chevron-down");
-      //       this.classList.add("fa-chevron-up");
-      //     } else {
-      //       this.classList.remove("fa-chevron-up");
-      //       this.classList.add("fa-chevron-down");
-      //     }
-      //   });
-      // });
+//     // Optional visually flip chevron icon
+//     if (dropdown.classList.contains("show")) {
+//       this.classList.remove("fa-chevron-down");
+//       this.classList.add("fa-chevron-up");
+//     } else {
+//       this.classList.remove("fa-chevron-up");
+//       this.classList.add("fa-chevron-down");
+//     }
+//   });
+// });
 
-    document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
-      toggle.addEventListener("click", function (e) {
-        e.preventDefault();
-        const parent = this.closest(".custom-dropdown");
-        const dropdown = parent.querySelector(".drop-down-links");
+document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
+  toggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    const parent = this.closest(".custom-dropdown");
+    const dropdown = parent.querySelector(".drop-down-links");
 
-        dropdown.classList.toggle("show");
+    dropdown.classList.toggle("show");
 
-        // Optional: rotate icon
-        this.classList.toggle("rotate");
-      });
-    });
+    // Optional: rotate icon
+    this.classList.toggle("rotate");
+  });
+});
+
+
+document.querySelectorAll(".mobile-dropdown-toggle").forEach(toggle => {
+  toggle.addEventListener("click", function () {
+    const parent = this.closest(".custom-dropdown");
+    const dropdown = parent.querySelector(".drop-down-links");
+
+    dropdown.classList.toggle("show-dropownd-mobile");
+
+    // Optional: rotate icon
+    this.classList.toggle("rotate");
+  });
+});
