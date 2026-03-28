@@ -222,8 +222,8 @@ img {
 .header-wrapper-section {
   position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
+  /* left: 0;
+  width: 100%; */
   z-index: 1050;
   transition: all 0.3s ease-in-out;
 }

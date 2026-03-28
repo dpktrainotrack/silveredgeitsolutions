@@ -150,11 +150,20 @@
     }
 
     /* Mobile dropdown handled in style.css */
+    @media screen and (max-width:768px) {
+      #mainNavbar2 {
+        /* background-color: var(--white) !important; */
+      }
+
+      .drop-down-links li a {
+        text-align: start;
+      }
+    }
   </style>
   <!-- Custom CSS -->
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
 
   <!-- ========== TOP HEADER BAR ========== -->
   <!-- <div class="top-header d-none d-md-block">
@@ -1231,7 +1240,7 @@
       <div class="container">
         <div class="contact-card">
           <div class="row g-4">
-            <div class="col-lg-4 ">
+            <div class="col-lg-4 col-md-6 col-12">
 
               <div class="contact-form">
                 <h4>Get In Touch</h4>
@@ -1254,7 +1263,7 @@
                 </form>
               </div>
             </div>
-            <div class="col-lg-2 col-md-6 d-flex justify-content-center">
+            <div class="col-lg-2 col-md-6 col-sm-6 col-12  d-flex justify-lg-content-center">
               <div>
 
                 <h5>Quick Links</h5>
@@ -1269,7 +1278,7 @@
               </div>
             </div>
 
-            <div class="col-lg-2 contact-left d-flex justify-content-center">
+            <div class="col-lg-2 col-md-6 col-sm-6 col-12 contact-left d-flex justify-lg-content-center">
               <div>
 
                 <h5 class=""> Our Courses</h5>
@@ -1286,7 +1295,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 contact-left d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12 contact-left d-flex justify-lg-content-center">
               <div>
 
                 <!-- <div>
@@ -1442,7 +1451,7 @@
   </button> -->
 
   <!-- ========== CONSULTATION MODAL ========== -->
-  <div class="modal fade" id="consultationModal" tabindex="-1">
+  <!-- <div class="modal fade" id="consultationModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -1480,7 +1489,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
